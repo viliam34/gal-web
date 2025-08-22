@@ -217,7 +217,7 @@ function updatePrice(){ // updates price and picture of a
 
 
     document.getElementById("cena").innerHTML = "Konečná cena je "+ cena + "EUR s DPH";
-    document.getElementById("main_img").src = "src/"+ podorys + "_" + strecha + "_" + previous_active_color + "_" + "cervene" + ".png"
+    document.getElementById("main_img").src = "src/"+ podorys + "_" + strecha + "_" + previous_active_color + "_" + "cervene" + ".jpg"
     return cena;
 }
 
