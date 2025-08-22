@@ -263,7 +263,7 @@
     margin-left: 30%;
   }
   .b> h3{
-    margin-left: 15%;
+    text-align: center;
     font-size: x-large;
     font-weight: bold;
   }
@@ -275,12 +275,13 @@
   }
   h3{
     font-size: small;
+    width: 100%;
   }
   .moznost-podorys{
     font-size: small;
     margin-right: 2%;
   }
-  #moznosti-doplnky{
-    margin-right: 10px;
+  .moznosti-doplnky{
+    margin-left: 0;
   }
 }
