@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="src/w3-style.css">
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+    </style>
+    <title>Configurator</title>
+</head>
+<body>
+    <div class="w3-top" >
+  <div class="w3-bar w3-white w3-card" id="myNavbar" style="background-color: rgb(79, 146, 108) !important;">
+    <a href="index.html" class="w3-bar-item w3-button w3-wide" style="font-size: 2vh;color: white;">
+        Domov
+    <i class="fa fa-home"></i></a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#configurator" class="w3-bar-item w3-button"style="font-size: 2vh;color: white;"><i class="fa fa-cog"></i> Konfigurátor</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+<div class="container">
+  <div class="a">
+    <img id= "main_img" src="src/standard_sedlova_cervena_cervene.png"; alt="Girl in a jacket" width="100%" height="fit-content">
+  </div>
+  <div class="b">
+        <button class="order-btn">Objednať</button>
+        <h3 id="cena">Konečná cena: 60000 EUR s DPH</h3>
+  </div>
+  <div class="c">
+    <div class="moznosti-doplnky">
+        <h3 style="padding-left: 1vh;font-weight: 400;">Výmera:</h3>
+        <div id="25" onclick="changeMetraz(id)" class="moznost-podorys-active">25m²</div>
+        <div id="35" onclick="changeMetraz(id)" class="moznost-podorys">35m²</div>
+        <div id="45" onclick="changeMetraz(id)" class="moznost-podorys">45m²</div>
+        <div id="60" onclick="changeMetraz(id)" class="moznost-podorys">60m²</div>
+        <div id="80" onclick="changeMetraz(id)" class="moznost-podorys">80m²</div>
+    </div>
+    <div class="moznosti-doplnky">
+        <h3 style="padding-left: 1vh;font-weight: 400;">Fasáda:</h3>
+            <div id= "cervena" onclick="changeColor(id)" class="moznost-podorys-active" style="background-color: coral;"></div>
+            <div id= "bezova" onclick="changeColor(id)" class="moznost-podorys" style="background-color: rgb(223, 183, 109) "></div>
+            <div id= "zelena" onclick="changeColor(id)" class="moznost-podorys" style="background-color: rgb(76, 148, 76);"></div>
+            <div id= "modra" onclick="changeColor(id)" class="moznost-podorys" style="background-color: rgb(110, 139, 227);"></div>
+    </div>
+    <div class="moznosti-doplnky">
+        <h3 style="padding-left: 1vh;font-weight:400;margin-top: 1.5vh;">Pôdorys:</h3>
+        <div id="elko" onclick="changePodorys(id)" class="moznost-podorys">
+            <svg width="40" height="40">
+                <rect x="1" y="1" width="40" height="10" stroke="rgb(0, 90, 69)" stroke-width="6" fill="rgb(0, 90, 69)" />
+                <rect x="0.5" y="1" width="10" height="40" stroke="rgb(0, 90, 69)" stroke-width="6" fill="rgb(0, 90, 69)" />
+            </svg>
+        </div>
+        <div id = "standard" onclick="changePodorys(id)" class="moznost-podorys-active">
+            <svg width="80" height="40">
+                <rect x="15" y="1" width="10" height="40" stroke="rgb(0, 90, 69)" stroke-width="6" fill="rgb(0, 90, 69)" />
+            </svg>
+        </div>
+    </div>
+    <h3 style="padding-left: 1vh;font-weight: 400;margin-top: 1vh;">Voliteľné doplnky:</h3>
+    <div class="moznosti-doplnky">
+        
+        <div id="panely" onclick="addAccessories(id)" class="moznost-doplnok-clicked">
+            <p style="width: fit-content;">Solárne panely: + 700 EUR</p>
+        </div>
+        <div id="zaluzie" onclick="addAccessories(id)" class="moznost-doplnok">
+            <p style="width: fit-content;">Žalúzie: + 350 EUR</p>
+        </div>
+        <div id="terasa" onclick="addAccessories(id)" class="moznost-doplnok">
+            <p style="width: fit-content;">Terasa: + 450 EUR</p>
+        </div>
+        <div id="bazen" onclick="addAccessories(id)" class="moznost-doplnok">
+            <p style="width: fit-content;">Bazen: + 6000 EUR</p>
+        </div>
+        <div id="garaz" onclick="addAccessories(id)" class="moznost-doplnok">
+            <p style="width: fit-content;">Garáž: +10000 EUR</p>
+        </div>
+    </div>
+    <h3 style="padding-left: 1vh;font-weight: 400;margin-top: 0.5vh;">Kúrenie:</h3>
+    <div class="moznosti-doplnky">
+        <div id = "gas" onclick="addHeating(id)" class="moznost-doplnok" style="width: 50%;">
+            <p style="width: fit-content;">Plyn: + 0 EUR</p>
+        </div>
+        <div id= "electric" onclick="addHeating(id)" class="moznost-doplnok" style="width: 50%;">
+            <p style="width: fit-content;">Elektrina: + 2500 EUR</p>
+        </div>
+    </div>
+    <h3 style="padding-left: 1vh;font-weight: 400;margin-top: 0.5vh;">Typ strechy:</h3>
+    <div class="moznosti-doplnky">
+        <div id = "sedlova" onclick="changeRoof(id)" class="moznost-doplnok-clicked" style="width: 50%;">
+            <p style="width: fit-content;">Sedlová: + 0 EUR</p>
+        </div>
+        <div id= "plocha" onclick="changeRoof(id)" class="moznost-doplnok" style="width: 50%;">
+            <p style="width: fit-content;">Plochá: + 2500 EUR</p>
+        </div>
+    </div>
+
+    <h3 style="padding-left: 1vh;font-weight: 400;margin-top: 0.5vh;">Typ základov:</h3>
+    <div class="moznosti-doplnky">
+        <div id= "concrete" onclick="addFoundation(id)" class="moznost-doplnok" style="width: 50%;">
+            <p style="width: fit-content;">Betón: + 0 EUR</p>
+        </div>
+        <div id="steel" onclick="addFoundation(id)" class="moznost-doplnok" style="width: 50%;">
+            <p style="width: fit-content;">Podstavec: + 3000 EUR</p>
+        </div>
+    </div>
+    <h3 style="padding-left: 1vh;font-weight: 400;margin-top: 1vh;">Stupeň dokončenia:</h3>
+    <div  class="moznosti-doplnky">
+        <div id= "empty"  onclick="addCompletion(id)"class="moznost-doplnok" style="width: 50%;" >
+            <p style="width: fit-content;">Holodom: + 0 EUR</p>
+           
+        </div>
+        <div id= "complete" onclick="addCompletion(id)" class="moznost-doplnok" style="width: 50%;justify-content: space-between;">
+            <p style="width: fit-content;">Plne zariadená stavba: + 20000 EUR</p>
+        </div>
+    </div>
+    <button class="order-btn" style="height: 5%;margin-left: 20%;">Stiahnuť PDF <i class="fa fa-file-pdf-o" style="font-size:24px"></i></button>
+  </div>
+</div>
+<script type="text/javascript" src="src/script.js"></script>
+</body>
+</html>
