@@ -1,0 +1,285 @@
+
+.konfigurator-button{
+    width: 100%;
+    height:10vh;
+    font-size: 2.5vh;
+    border: none;
+    text-align: left;
+    background-color: rgba(244, 244, 244, 0.83);
+}
+.konfigurator-button-selected{
+    width: 100%;
+    height:10vh;
+    font-size: 2.5vh;
+    border: none;
+    text-align: left;
+    background-color: rgb(46, 111, 96);
+    color: white;
+}
+.send-inquiry{
+    width: 70%;
+    height:5vh;
+    background-color: rgb(118, 198, 180);
+    border-radius: 2vh;
+    border: none;
+    font-size: 2vh;
+    margin-left: 5vh;
+}
+.send-inquiry:hover{
+    width: 70%;
+    height:5vh;
+    background-color: rgb(66, 164, 141);
+    border-radius: 2vh;
+    border: none;
+    font-size: 2vh;
+    margin-left: 10%;
+}
+.image-okno{
+    background-image: url("standard_plocha_bezova_cervene.png");
+    background-color: #cccccc;
+    background-size: 1024px 512px;
+    background-repeat: no-repeat;
+}
+#moznosti-podorys{
+    margin-left: 1vh;
+    display: flex;
+    width: fit-content;
+    background-color: #ffffff;
+    border: 1px solid rgb(231, 231, 231);
+    border-radius: 1%;
+}
+.moznost-podorys{
+    border-radius: 1vh;
+    font-size: large;
+    height: 40%;
+    min-height: 40px;
+    min-width: 10%;
+    max-width: 30%;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid rgba(0, 18, 0, 0);
+    background-color: rgb(229, 234, 232);
+    padding: 8px;
+    margin: 5px;
+}
+.moznost-podorys-active{
+    border-radius: 1vh;
+    font-size: large;
+    height: 40%;
+    min-height: 40px;
+    min-width: 10%;
+    max-width: 30%;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid rgb(0, 18, 0);
+    background-color: rgb(39, 124, 100);
+    padding: 8px;
+    margin: 5px;
+}
+.moznost-podorys:hover{
+    border-radius: 1vh;
+    height: 40%;
+    min-height: 40px;
+    min-width: 10%;
+    max-width: 30%;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid rgb(0, 18, 0);
+    background-color: rgb(158, 216, 201);
+    padding: 8px;
+    margin: 5px;
+}
+.moznosti-doplnky{
+    font-family:Verdana,sans-serif;
+    margin-top: 1vh;
+    display: flex;
+    width: 98%;
+    background-color: #ffffff;
+    border: 1px solid rgb(198, 198, 198);
+    
+    border-radius: 1vh;
+    height: fit-content;
+    margin-left: 1vh;
+}
+.moznost-doplnok{
+    font-family:sans-serif;
+    border-radius: 1vh;
+    border: 3px solid rgb(204, 204, 204);
+    display: block;
+    font-size: 1.5vh;
+    width: 20%;
+    text-align: center;
+    font-weight: 400;
+    background-color: rgb(229, 234, 232);
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.moznost-doplnok > p {
+    text-align: center;
+    display: flex;
+    height: 50%;
+    padding-left: 5px;
+    width: 100%;
+}
+.moznost-doplnok:hover{
+    font-family:sans-serif;
+    border-radius: 1vh;
+    border: 3px solid rgb(204, 204, 204);
+    display: block;
+    font-size: 1.5vh;
+    width: 20%;
+    text-align: center;
+    font-weight: 400;
+    background-color: rgb(158, 216, 201);
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.moznost-doplnok-clicked{
+    font-family:sans-serif;
+    border-radius: 1vh;
+    border: 3px solid rgb(0, 111, 17);
+    display: block;
+    font-size: 1.5vh;
+    width: 20%;
+    text-align: center;
+    font-weight: 400;
+    color: white;
+    background-color: rgb(39, 142, 100);
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+#price-wrapper{
+    background-color: rgba(228, 252, 245, 0.789);
+    height: 100%;
+    width:50%;
+    font-size:6vh;
+    margin-left: 5vh;
+    border-radius: 1vh;
+
+}
+#price-wrapper >h4 {
+    padding-left: 4vh;
+    margin-top: 30vh;
+    font-size: 2.5vh;
+
+}
+
+.konfigurator-moznosti-left {
+    height: 100vh;
+    background-color: rgb(253, 253, 253);
+    width: 15%;
+    display: block;
+    padding-top: 5vh;
+}
+#wrapper-info{
+    position: static;
+    left:0px;
+    top:750px}
+
+.container {  display: grid;
+  grid-template-columns: 1fr 0.7fr 1.3fr 1fr [b] 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1.4fr 0.6fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  height: 95vh;
+  margin-top: 5vh;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "a a a a a a c c c"
+    "a a a a a a c c c"
+    "a a a a a a c c c"
+    "b b b b b b c c c"
+    "b b b b b b c c c";
+}
+
+.a { 
+    grid-area: a;
+    background-color: rgb(255, 255, 255); 
+}
+
+.b { 
+    grid-area: b; 
+    display: flex;
+    background-color: rgb(255, 255, 255);
+}
+
+.c { 
+    grid-area: c; 
+    background-color: rgb(255, 255, 255);
+}
+.order-btn{
+    font-family:sans-serif;
+    width: 45%;
+    height: 20%;
+    font-size: x-large;
+    background-color: rgb(158, 216, 201); 
+    border: none;
+    font-weight: 400;
+    border-radius: 15px;
+    margin: 5%;
+}
+.order-btn:hover{
+    font-family:sans-serif;
+    width: 45%;
+    height: 20%;
+    font-size: x-large;
+    background-color: rgb(66, 155, 131); 
+    border: none;
+    font-weight: 400;
+    border-radius: 15px;
+    margin: 5%;
+}
+.b > h3{
+    padding-top: 5%;
+}
+@media screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .a{
+    width: 100%;
+    font-size: medium;
+    order: 1;
+  }
+  .b{
+    width: 100%;
+    font-size: medium;
+    display: block;
+    order: 3;
+  }
+  .b> .order-btn{
+    margin-left: 20%;
+    height: 40%;
+  }
+  .c > .order-btn{
+    height: 40%;
+  }
+  .b> h3{
+    margin-left: 15%;
+    font-size: x-large;
+    font-weight: bold;
+  }
+  .c{
+    width: 100%;
+    font-size: medium;
+    margin-right: 5%;
+    order: 2;
+  }
+  h3{
+    font-size: small;
+  }
+  .moznost-podorys{
+    font-size: small;
+    margin-right: 2%;
+  }
+  #moznosti-doplnky{
+    margin-right: 10px;
+  }
+}
