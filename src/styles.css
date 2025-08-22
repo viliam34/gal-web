@@ -278,8 +278,14 @@
     width: 100%;
   }
   .moznost-podorys{
-    font-size: small;
+    font-size: x-small;
     margin-right: 2%;
+    margin-left: 0%;
+  }
+  .moznost-podorys-active{
+    font-size: x-small;
+    margin-right: 2%;
+    margin-left: 0%;
   }
   .moznosti-doplnky{
     margin-left: 0;
