@@ -25,18 +25,14 @@ const accessories = {
 function changePodorys(podorys_type){
     if(podorys_type === 'standard'){ // remove active from plocha, add active to sedlova
         document.getElementById(podorys_type).classList.remove("moznost-podorys");
-        document.getElementById(podorys_type).classList.remove("moznost-podorys-active");
         document.getElementById(podorys_type).classList.add("moznost-podorys-active");
-        
         document.getElementById('elko').classList.remove("moznost-podorys-active");
-        document.getElementById(podorys_type).classList.add("moznost-podorys");
-    } else { // remove active from sedlova, add active to plocha
+        document.getElementById('elko').classList.add("moznost-podorys");        
+    } else { // remove active from Standard, add active to Elko
         document.getElementById(podorys_type).classList.remove("moznost-podorys");
-        document.getElementById(podorys_type).classList.remove("moznost-podorys-active");
         document.getElementById(podorys_type).classList.add("moznost-podorys-active");
-        
         document.getElementById('standard').classList.remove("moznost-podorys-active");
-        document.getElementById(podorys_type).classList.add("moznost-podorys");
+        document.getElementById('standard').classList.add("moznost-podorys"); 
         
 }
     podorys = podorys_type;

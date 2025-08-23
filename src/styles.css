@@ -49,22 +49,24 @@
     border-radius: 1%;
 }
 .moznost-podorys{
-    border-radius: 1vh;
-    font-size: large;
-    height: 40%;
-    min-height: 40px;
-    min-width: 10%;
-    max-width: 30%;
-    text-align: center;
-    font-weight: bold;
-    border: 2px solid rgba(0, 18, 0, 0);
-    background-color: rgb(229, 234, 232);
-    padding: 8px;
-    margin: 5px;
+  border-radius: 1vh;
+  font-size: 1vw;
+  height: 40%;
+  min-height: 40px;
+  min-width: 10%;
+  max-width: 30%;
+  text-align: center;
+  font-weight: bold;
+  border: 2px solid rgba(0, 18, 0, 0);
+  background-color: rgb(229, 234, 232);
+  padding: 8px;
+  margin: 5px;
+
+
 }
 .moznost-podorys-active{
     border-radius: 1vh;
-    font-size: large;
+    font-size: 1vw;
     height: 40%;
     min-height: 40px;
     min-width: 10%;
@@ -78,6 +80,7 @@
 }
 .moznost-podorys:hover{
     border-radius: 1vh;
+    font-size: 1vw;
     height: 40%;
     min-height: 40px;
     min-width: 10%;
@@ -86,7 +89,6 @@
     font-weight: bold;
     border: 2px solid rgb(0, 18, 0);
     background-color: rgb(158, 216, 201);
-    padding: 8px;
     margin: 5px;
 }
 .moznosti-doplnky{
@@ -281,13 +283,22 @@
     font-size: x-small;
     margin-right: 2%;
     margin-left: 0%;
+
   }
   .moznost-podorys-active{
     font-size: x-small;
     margin-right: 2%;
     margin-left: 0%;
   }
+  .moznost-podorys:hover{
+    font-size: x-small;
+    margin-right: 2%;
+    margin-left: 0%;
+  }
   .moznosti-doplnky{
     margin-left: 0;
+  }
+  #elko , #standard {
+    width: 30%;
   }
 }
