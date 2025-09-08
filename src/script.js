@@ -217,3 +217,29 @@ function updatePrice(){ // updates price and picture of a
     return cena;
 }
 
+
+let img_id = 1;
+function changeBackgroundImg(btn_id){
+    if (btn_id == 'left'){
+        img_id -= 1;
+    }
+    if(btn_id == 'right'){
+        img_id += 1;
+    }
+    if(img_id > 1){
+        img_id = -1;
+    }
+    if(img_id<-1){
+        img_id = 1;
+    }
+    let image_container = document.getElementsByClassName('.bgimg-1');
+    if(img_id == 1){
+        image_container.style.backgroundImage = "url('src/image_main_2.jpg')";
+    }
+    if(img_id == -1){
+        image_container.style.backgroundImage = "url('src/image_main_3.jpg')";
+    }
+    if(img_id == 0){
+        image_container.style.backgroundImage = "url('src/image_main_1.jpg')";
+    }
+}
