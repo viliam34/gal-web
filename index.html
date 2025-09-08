@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="src/w3-style.css">
+    <link rel="stylesheet" href="src/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="src/index_script.js"></script>
     <style>
-    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-
     body, html {
       height: 100%;
       line-height: 1.8;
@@ -36,11 +36,12 @@
     <a href="#home" class="w3-bar-item w3-button w3-wide" style="font-size: 2vh;color: white;">MyCabinHouse</a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
+      
+      <a href="#team" class="w3-bar-item w3-button"style="font-size: 2vh;color: white;"><i class="fa fa-user"></i>Naše modely</a>
       <a href="#about" class="w3-bar-item w3-button" style="font-size: 2vh;color: white;">O nás</a>
-      <a href="#team" class="w3-bar-item w3-button"style="font-size: 2vh;color: white;"><i class="fa fa-user"></i> Modely</a>
-      <a href="#work" class="w3-bar-item w3-button"style="font-size: 2vh;color: white;"><i class="fa fa-th"></i> Projekty</a>
+         <!-- <a href="#work" class="w3-bar-item w3-button"style="font-size: 2vh;color: white;"><i class="fa fa-th"></i> Projekty</a> -->
       <a href="#contact" class="w3-bar-item w3-button"style="font-size: 2vh;color: white;"><i class="fa fa-envelope"></i> Kontakt</a>
-      <a href="configurator.html" class="w3-bar-item w3-button"style="font-size: 2vh;color: white;"><i class="fa fa-cog"></i> Konfigurátor</a>
+      <a href="configurator.html" class="w3-bar-item w3-button"style="font-size: 2vh;color: white;background-color:black"><i class="fa fa-cog"></i> Konfigurátor</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -53,36 +54,45 @@
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">Naše modely</a>
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">O nás</a>
-  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">Modely</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">Projekty</a>
+ <!-- <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">Projekty</a>-->
   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">Kontakt</a>
-  <a href="configurator.html" onclick="w3_close()" class="w3-bar-item w3-button">Konfigurátor</a>
+  <a href="configurator.html" onclick="w3_close()" class="w3-bar-item w3-button" style="background-color: black;">Konfigurátor</a>
 </nav>
 
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home" >
   <div class="w3-display-left w3-text-white" style="padding:48px" >
-    <span class="w3-jumbo w3-hide-small" >Modulárne domy<br> pre Vás</span><br>
+    <span class="w3-jumbo w3-hide-small" >Váš vysnívaný modulový dom <br> z prírodných materiálov</span><br>
     <span class="w3-xxlarge w3-hide-large w3-hide-medium">Vyberte si Váš vysnívaný domov</span><br>
     <span class="w3-large">Vyberte si Váš vysnívaný domov</span>
-    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top  w3-hover-opacity-off" style="border-radius: 1vh;margin-left: 3vh;">Zistite viac</a></p>
+    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top  w3-hover-opacity-off" style="border-radius: 1vh;margin-left: 3vh;">Prezrite si naše modely</a></p>
   </div> 
+  <button class="w3-button w3-green w3-display-left" onclick="changeBackgroundImg('left')">&#10094;</button>
+  <button class="w3-button w3-green w3-display-right" onclick="changeBackgroundImg('right')">&#10095;</button>
   
+  
+  <!-- NEFUNGUJU
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <span id = 'span-1' class="slideshow-btn" onclick="changeBackgroundImg(-1)"></span>
+    <span id = 'span-2'class="slideshow-btn" onclick="changeBackgroundImg(0)"></span>
+    <span id = 'span-3' class="slideshow-btn" onclick="changeBackgroundImg(1)"></span>
+  </div>
+  -->
 </header>
 
 <!-- About Section -->
 <div class="w3-container" style="padding:128px 16px" id="about">
-  <h3 class="w3-center">O nás</h3>
-  <p class="w3-center w3-large">Naše dlhoročné skúsenosti z oblasti stavebníctva aplikujeme pri výrobe a stavbe modulárnych domov.Naše dlhoročné skúsenosti z oblasti stavebníctva aplikujeme pri výrobe a stavbe modulárnych domov.
-    Naše dlhoročné skúsenosti z oblasti stavebníctva aplikujeme pri výrobe a stavbe modulárnych domov.
-  Naše dlhoročné skúsenosti z oblasti stavebníctva aplikujeme pri výrobe a stavbe modulárnych domov.
-Naše dlhoročné skúsenosti z oblasti stavebníctva aplikujeme pri výrobe a stavbe modulárnych domov. 
-Naše dlhoročné skúsenosti z oblasti stavebníctva aplikujeme pri výrobe a stavbe modulárnych domov.
-Naše dlhoročné skúsenosti z oblasti stavebníctva aplikujeme pri výrobe a stavbe modulárnych domov.
-Naše dlhoročné skúsenosti z oblasti stavebníctva aplikujeme pri výrobe a stavbe modulárnych domov.
-Naše dlhoročné skúsenosti z oblasti stavebníctva aplikujeme pri výrobe a stavbe modulárnych domov.
-Naše dlhoročné skúsenosti z oblasti stavebníctva aplikujeme pri výrobe a stavbe modulárnych domov.</p>
+  <h3 class="w3-center">„Sme MyCabinHouse – modulové bývanie pre moderný životný štýl“</h3>
+  <p class="w3-center w3-large">Našim cieľom je priniesť ľuďom dostupné a estetické bývanie, ktoré rešpektuje prírodu aj váš osobný priestor.
+Staviame modulové domy z prírodných materiálov, ktoré sú:<br>
+•	rýchlo dodané a pripravené na okamžité používanie,<br>
+•	dizajnovo prepracované a funkčne premyslené,<br>
+•	vhodné na bývanie, rekreáciu aj podnikanie.<br>
+Veríme, že dom nie je len stavba, ale miesto, kde vznikajú spomienky.
+</p>
 
   <div class="w3-row-padding w3-center" style="margin-top:64px">
     <div class="w3-quarter">
@@ -108,6 +118,62 @@ Naše dlhoročné skúsenosti z oblasti stavebníctva aplikujeme pri výrobe a s
   </div>
 </div>
 
+
+
+<!-- Team Section -->
+<div class="w3-container" style="padding:128px 16px" id="team">
+  <h3 class="w3-center">Vyberte si svoj vysnívaný MyCabinHouse</h3> <!--Modely-->
+  <p class="w3-center w3-large">Ponúkame tri základné modely modulových domov, ktoré sa dajú prispôsobiť vašim potrebám a štýlu života.</p>
+  <div class="w3-row-padding w3-grayscale" id='modely-wrapper'style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="src/donovaly.jpeg" alt="John" style="width:100%">
+        <div class="w3-container">
+          <h3>Model Donovaly</h3>
+          <p class="w3-opacity">25m²</p>
+          <p>Perfektný ako rekreačná chata alebo štartovací dom. Kompaktný, praktický a útulný.</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="	fa fa-wrench"></i> Konfigurovať</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="src/lomnica.jpg" alt="Jane" style="width:100%">
+        <div class="w3-container">
+          <h3>Model Lomnica</h3>
+          <p class="w3-opacity">50m²</p>
+          <p>Ideálne riešenie pre komfortné bývanie alebo prázdninový domček pre rodinu.</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="	fa fa-wrench"></i> Konfigurovať</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="src/chopok.jpeg" alt="Mike" style="width:100%">
+        <div class="w3-container">
+          <h3>Model Chopok</h3>
+          <p class="w3-opacity">65m²</p>
+          <p>Plnohodnotné bývanie so všetkým, čo potrebujete. Priestranný, moderný a štýlový.</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="	fa fa-wrench"></i> Konfigurovať</button></p>
+        </div>
+      </div>
+    </div>
+    <!--  Stvrty model
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="src/gerlach.jpg" alt="Dan" style="width:100%">
+        <div class="w3-container">
+          <h3>Model Gerlach</h3>
+          <p class="w3-opacity">4-izbový 80m²</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="	fa fa-wrench"></i> Konfigurovať</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  -->
+</div>
+
 <!-- Promo Section - "We know design" -->
 <div class="w3-container w3-light-grey" style="padding:128px 16px">
   <div class="w3-row-padding">
@@ -129,57 +195,7 @@ Naše dlhoročné skúsenosti z oblasti stavebníctva aplikujeme pri výrobe a s
   </div>
 </div>
 
-<!-- Team Section -->
-<div class="w3-container" style="padding:128px 16px" id="team">
-  <h3 class="w3-center">Naše modely</h3>
-  <p class="w3-center w3-large">Vyberte si zo širokej ponuky našich modelov:</p>
-  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="src/donovaly.jpeg" alt="John" style="width:100%">
-        <div class="w3-container">
-          <h3>Model Donovaly</h3>
-          <p class="w3-opacity">1.5-izbový 40m²</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="	fa fa-wrench"></i> Konfigurovať</button></p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="src/lomnica.jpg" alt="Jane" style="width:100%">
-        <div class="w3-container">
-          <h3>Model Lomnica</h3>
-          <p class="w3-opacity">3-izbový 60m²</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="	fa fa-wrench"></i> Konfigurovať</button></p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="src/chopok.jpeg" alt="Mike" style="width:100%">
-        <div class="w3-container">
-          <h3>Model Chopok</h3>
-          <p class="w3-opacity">2-izbový 40m²</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="	fa fa-wrench"></i> Konfigurovať</button></p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="src/gerlach.jpg" alt="Dan" style="width:100%">
-        <div class="w3-container">
-          <h3>Model Gerlach</h3>
-          <p class="w3-opacity">4-izbový 80m²</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="	fa fa-wrench"></i> Konfigurovať</button></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 <!-- Promo Section "Statistics" -->
 <div class="w3-container w3-row w3-center  w3-padding-64" style="background-color: rgba(0, 85, 48, 0.474);">
@@ -201,7 +217,8 @@ Naše dlhoročné skúsenosti z oblasti stavebníctva aplikujeme pri výrobe a s
   </div>
 </div>
 
-<!-- Work Section -->
+<!-- Work Section Nase realizacie
+ <!--
 <div class="w3-container" style="padding:128px 16px" id="work">
   <h3 class="w3-center">Naše realizácie</h3>
   <p class="w3-center w3-large">Nahliadnite do galérie už postavených domov:</p>
@@ -236,7 +253,7 @@ Naše dlhoročné skúsenosti z oblasti stavebníctva aplikujeme pri výrobe a s
     </div>
   </div>
 </div>
-
+-->
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
   <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
@@ -253,24 +270,34 @@ Naše dlhoročné skúsenosti z oblasti stavebníctva aplikujeme pri výrobe a s
 
 <!-- Contact Section -->
 <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
-  <h3 class="w3-center">Kontakt</h3>
-  <p class="w3-center w3-large">Ozvite sa nám,budeme radi :)</p>
-  <div style="margin-top:48px">
-    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Košice, Slovenská republika</p>
-    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +421 000 000 000</p>
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+  <h3 class="w3-center">Spojte sa s nami</h3> <!--Kontakt-->
+  <p class="w3-center w3-large">Máte otázky alebo potrebujete viac informácií? Radi vám poradíme a pripravíme nezáväznú ponuku.</p>
+  <div id="contact-info-wrapper" style="margin-top:48px;">
+    <!--<p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Košice, Slovenská republika</p>-->
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i>Telefón: Dávid Gál – konateľ: +421 948 362 206</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: info@mycabinhouse.eu</p>
     <br>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-border" type="text" placeholder="Vaše meno" required name="Name"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Emailová adresa" required name="Email"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Predmet správy" required name="Subject"></p>
-      <p ><textarea rows="4" cols="1" class="w3-input w3-border" type="text" placeholder="Text správy" required name="Message"></textarea></p>
+    <form id='input-form' action="/action_page.php" target="_blank">
+      <p><input class="input-text" type="text" placeholder="Vaše meno" required name="Name"></p>
+      <p><input class="input-text" type="text" placeholder="Emailová adresa" required name="Email"></p>
+      <p><input class="input-text" type="text" placeholder="Predmet správy" required name="Subject"></p>
+      <p ><textarea rows="4" cols="1" class="input-text" type="text" placeholder="Text správy" required name="Message"></textarea></p>
+      
       <p>
-        <button class="w3-button w3-black" type="submit">
+      <p style="margin-left: 40%;">Napíšte nám alebo si dohodnite osobnú konzultáciu.</p>
+        <button id= "submit-message-btn" class="w3-button w3-black" style='margin-left: 45%;'type="submit">
           <i class="fa fa-paper-plane"></i> Odoslať správu
         </button>
       </p>
+    </form> 
+    
   </div>
+</div>
+<!--Configurator Section-->
+<div class="w3-container" style="padding:128px 16px" id="configurator">
+  <h3 class="w3-center">Navrhnite si svoj vlastný MyCabinHouse</h3> <!--Kontakt-->
+  <p class="w3-center w3-large">Vyberte si veľkosť, dizajn a doplnky podľa svojho vkusu. V našom konfigurátore si viete vyskladať modulový dom presne podľa svojich predstáv.</p>
+  <p><button class="configurator-btn-large" onclick="window.location.href = 'configurator.html';"><i class="	fa fa-wrench"></i> Spustiť konfigurátor</button></p>
 </div>
 
 <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
