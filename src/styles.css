@@ -254,7 +254,6 @@ p, h3, h1, h2, a ,html, body{
   margin-left: 30%;
   border: 0px;
   font-size: large;
-  height: 3em;
   border-radius: 1vh;
 
   background-color: rgb(79, 146, 108)!important;
@@ -265,7 +264,6 @@ p, h3, h1, h2, a ,html, body{
   margin-left: 30%;
   border: 0px;
   font-size: large;
-  height: 3em;
   border-radius: 1vh;
   background-color: rgb(115, 184, 145)!important;
 }
