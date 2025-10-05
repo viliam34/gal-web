@@ -1,5 +1,8 @@
 
 let img_id = 0;
+
+
+
 function changeBackgroundImg(btn_id){
     
     
@@ -45,3 +48,7 @@ function changeBackgroundImg(btn_id){
     }
     console.log(img_id);
 }
+setInterval(() => {
+    console.log("Hello, World!");
+    changeBackgroundImg('right');
+}, 15000);

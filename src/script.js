@@ -220,6 +220,7 @@ function updatePrice(){ // updates price and picture of a
 
 let img_id = 1;
 function changeBackgroundImg(btn_id){
+    
     if (btn_id == 'left'){
         img_id -= 1;
     }

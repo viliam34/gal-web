@@ -1,11 +1,19 @@
 
-
 /* font family for all 'CamptonBook', Helvetica, Arial, sans-serif; */
 p, h3, h1, h2, a ,html, body{
- font-family: 'CamptonBook', Helvetica, Arial, sans-serif !important; 
+   font-family: "Outfit", sans-serif;
+   font-weight: 300;
+   font-optical-sizing: auto;
+    font-style: normal;
+ /*font-family: Campton, Helvetica, Arial, sans-serif !important;*/ 
 }
 #myNavbar{
   height: 4em;
+  padding-bottom: 10vh !important;
+}
+#logo{
+  margin-left: 43%;
+  margin-top: 2vh;
 }
 .konfigurator-button{
     width: 100%;
@@ -255,8 +263,8 @@ p, h3, h1, h2, a ,html, body{
   border: 0px;
   font-size: large;
   border-radius: 1vh;
-
-  background-color: rgb(79, 146, 108)!important;
+  height: 4em;
+  background-color: rgb(135, 152, 102)!important;
 }
 .configurator-btn-large:hover{
   min-width: 40%;
@@ -291,12 +299,33 @@ p, h3, h1, h2, a ,html, body{
   background-color: blue;
   z-index : 500;
 }
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #ffffffdc;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  margin-top: 3vh;
+}
+
 
 #modely-wrapper{
   margin-left: 20%;
 }
 
 @media screen and (max-width: 600px) {
+  #logo{
+    margin-left: 5%;
+  }
+  #home{
+    font-size: 2em;
+  }
+  #hamburger-small{
+    padding-top: 2.5vh;
+  }
   .container {
     display: flex;
     flex-direction: column;
