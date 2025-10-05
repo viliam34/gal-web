@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="src/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Lexend+Peta:wght@100..900&family=Outfit:wght@294&display=swap" rel="stylesheet">
     <script type="text/javascript" src="src/index_script.js"></script>
     <style>
     body, html {
@@ -32,21 +36,22 @@
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top" >
-  <div class="w3-bar w3-white w3-card" id="myNavbar" style="background-color: rgb(79, 146, 108) !important;">
-    <a href="#home" class="w3-bar-item w3-button w3-wide" style="font-size: 2vh;color: white;">MyCabinHouse</a>
+  <div class="w3-bar w3-white w3-card" id="myNavbar" style="background-color: rgb(255, 255, 255) !important;">
+    <img  src="src\WEBLOGO-500.png" id= 'logo' alt="Company Logo MyCabinHouse" width="300px;" height="75px;">
+    <!--<a href="#home" class="w3-bar-item w3-button w3-wide" style="font-size: 2vh;color: white;">MyCabinHouse</a> -->
     <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
+    <div class="w3-right w3-hide-small" style="padding-top: 2.5vh;">
       
-      <a href="#team" class="w3-bar-item w3-button"style="font-size: 2vh;color: white;"><i class="fa fa-user" style="padding-right: 10px;"></i>Naše modely</a>
-      <a href="#about" class="w3-bar-item w3-button" style="font-size: 2vh;color: white;">O nás</a>
+      <a href="#team" class="w3-bar-item w3-button"style="font-weight: lighter ;font-size: 2vh;color: rgb(0, 0, 0);"><i class="fa fa-user" style="padding-right: 10px;"></i>Naše modely</a>
+      <a href="#about" class="w3-bar-item w3-button" style="font-size: 2vh;color: rgb(0, 0, 0);">O nás</a>
          <!-- <a href="#work" class="w3-bar-item w3-button"style="font-size: 2vh;color: white;"><i class="fa fa-th"></i> Projekty</a> -->
-      <a href="#contact" class="w3-bar-item w3-button"style="font-size: 2vh;color: white;"><i class="fa fa-envelope"></i> Kontakt</a>
-      <a href="configurator.html" class="w3-bar-item w3-button"style="font-size: 2vh;color: white;background-color:black"><i class="fa fa-cog"></i> Konfigurátor</a>
+      <a href="#contact" class="w3-bar-item w3-button"style="font-size: 2vh;color: rgb(0, 0, 0);"><i class="fa fa-envelope"></i> Kontakt</a>
+      <a href="configurator.html" class="w3-bar-item w3-button"style="font-weight: bold;;font-size: 2vh;color: white;background-color:#879866"><i class="fa fa-cog"></i> Konfigurátor</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
+    <a id='hamburger-small'href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars" style="font-size:36px"></i>
     </a>
   </div>
 </div>
@@ -68,11 +73,16 @@
     <span class="w3-jumbo w3-hide-small" >Váš vysnívaný modulový dom <br> z prírodných materiálov</span><br>
     <span class="w3-xxlarge w3-hide-large w3-hide-medium">Vyberte si Váš vysnívaný domov</span><br>
     <span class="w3-large">Vyberte si Váš vysnívaný domov</span>
+    
     <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top  w3-hover-opacity-off" style="border-radius: 1vh;margin-left: 3vh;">Prezrite si naše modely</a></p>
   </div> 
-  <button class="w3-button w3-green w3-display-left" onclick="changeBackgroundImg('left')">&#10094;</button>
-  <button class="w3-button w3-green w3-display-right" onclick="changeBackgroundImg('right')">&#10095;</button>
-  
+  <button class="w3-button w3-green w3-display-left" style="background-color: #879866 !important;" onclick="changeBackgroundImg('left')">&#10094;</button>
+  <button class="w3-button w3-green w3-display-right" style="background-color: #879866 !important;" onclick="changeBackgroundImg('right')">&#10095;</button>
+  <div style="text-align:center; position: absolute;z-index: 50;left: 0%;bottom: 15px;width: 100%;height: 5%; ">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
   
   <!-- NEFUNGUJU
   <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
@@ -81,11 +91,12 @@
     <span id = 'span-3' class="slideshow-btn" onclick="changeBackgroundImg(1)"></span>
   </div>
   -->
+  
 </header>
 
 <!-- About Section -->
 <div class="w3-container" style="padding:128px 16px" id="about">
-  <h3 class="w3-center">„Sme MyCabinHouse – modulové bývanie pre moderný životný štýl“</h3>
+  <h3 class="w3-center"><h2 style="font-weight: 1000; text-align: center;">Sme MyCabinHouse – modulové bývanie pre moderný životný štýl</h2>
   <p class="w3-center w3-large">Našim cieľom je priniesť ľuďom dostupné a estetické bývanie, ktoré rešpektuje prírodu aj váš osobný priestor.
 Staviame modulové domy z prírodných materiálov, ktoré sú:<br>
 •	rýchlo dodané a pripravené na okamžité používanie,<br>
@@ -198,7 +209,7 @@ Veríme, že dom nie je len stavba, ale miesto, kde vznikajú spomienky.
 
 
 <!-- Promo Section "Statistics" -->
-<div class="w3-container w3-row w3-center  w3-padding-64" style="background-color: rgba(0, 85, 48, 0.474);">
+<div class="w3-container w3-row w3-center  w3-padding-64" style="background-color: rgb(135, 152, 102);">
   <div class="w3-quarter">
     <span class="w3-xxlarge">14</span>
     <br>Konfigurovateľných domov
