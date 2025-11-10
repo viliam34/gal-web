@@ -37,7 +37,7 @@
 <!-- Navbar (sit on top) -->
 <div class="w3-top" >
   <div class="w3-bar w3-white w3-card" id="myNavbar" style="background-color: rgb(255, 255, 255) !important;">
-    <img  src="src\WEBLOGO-500.png" id= 'logo' alt="Company Logo MyCabinHouse" width="300px;" height="75px;">
+    <img  src="src/modulmax_svetle_pozadie.png" id= 'logo' alt="Company Logo MyCabinHouse" width="250px;" height="60px;">
     <!--<a href="#home" class="w3-bar-item w3-button w3-wide" style="font-size: 2vh;color: white;">MyCabinHouse</a> -->
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small" style="padding-top: 2.5vh;">
@@ -70,11 +70,15 @@
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home" >
   <div class="w3-display-left w3-text-white" style="padding:48px" >
-    <span class="w3-jumbo w3-hide-small" >Váš vysnívaný modulový dom <br> z prírodných materiálov</span><br>
+    <span class="w3-jumbo w3-hide-small" >Modulové domy z prírodných materiálov <br>– dostupné, kvalitné, udržateľné <br> z prírodných materiálov</span><br>
     <span class="w3-xxlarge w3-hide-large w3-hide-medium">Vyberte si Váš vysnívaný domov</span><br>
-    <span class="w3-large">Vyberte si Váš vysnívaný domov</span>
-    
-    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top  w3-hover-opacity-off" style="border-radius: 1vh;margin-left: 3vh;">Prezrite si naše modely</a></p>
+    <span class="w3-large">Modulové domy pre tých, ktorí hľadajú dostupné bývanie z poctivých prírodných materiálov
+za férovú cenu.</span>
+    <div id="btn-wrapper">
+       <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top  w3-hover-opacity-off" style="border-radius: 1vh;margin-left: 3vh;">Pozrieť portfólio</a></p>
+    <p><a href="#contact" class="w3-button w3-white w3-padding-large w3-large w3-margin-top  w3-hover-opacity-off" style="border-radius: 1vh;margin-left: 3vh;">Získať ponuku</a></p>
+    </div>
+   
   </div> 
   <button class="w3-button w3-green w3-display-left" style="background-color: #879866 !important;" onclick="changeBackgroundImg('left')">&#10094;</button>
   <button class="w3-button w3-green w3-display-right" style="background-color: #879866 !important;" onclick="changeBackgroundImg('right')">&#10095;</button>
@@ -95,37 +99,45 @@
 </header>
 
 <!-- About Section -->
-<div class="w3-container" style="padding:128px 16px" id="about">
-  <h3 class="w3-center"><h2 style="font-weight: 1000; text-align: center;">Sme MyCabinHouse – modulové bývanie pre moderný životný štýl</h2>
-  <p class="w3-center w3-large">Našim cieľom je priniesť ľuďom dostupné a estetické bývanie, ktoré rešpektuje prírodu aj váš osobný priestor.
-Staviame modulové domy z prírodných materiálov, ktoré sú:<br>
-•	rýchlo dodané a pripravené na okamžité používanie,<br>
-•	dizajnovo prepracované a funkčne premyslené,<br>
-•	vhodné na bývanie, rekreáciu aj podnikanie.<br>
-Veríme, že dom nie je len stavba, ale miesto, kde vznikajú spomienky.
+<div class="w3-container" style="padding:128px 16px; border-bottom: 2px solid rgb(121, 121, 121);" id="about">
+  <h3 class="w3-center"><h2 style="font-weight: 1000; text-align: center;">O nás</h2>
+  <p class="w3-center w3-large" style="width: 70%;margin-left: 15%;">Sme slovenská firma, ktorá verí, že moderné bývanie môže byť dostupné, ekologické a
+pripravené bez zbytočných komplikácií.
+Naše modulové domy vznikajú z poctivých prírodných materiálov v kombinácii s precíznym
+
+spracovaním. Každý dom je kompletne zmontovaný v našej dielni, pripravený na okamžité
+bývanie a v prípade potreby aj jednoducho premiestniteľný na nový pozemok.
+Značka MODULMAX spája praktickosť, udržateľnosť a slobodu do jedného riešenia.
+Naším cieľom je prinášať inteligentne navrhnuté domy, ktoré sa prispôsobia životu svojich
+majiteľov – ponúkajú komfort na minimálnej ploche, rýchlu montáž, mobilitu a nízke
+prevádzkové náklady s ohľadom na životné prostredie.
+Výroba prebieha priamo na Slovensku v našej vlastnej hale, kde si môžete osobne pozrieť
+priebeh montáže vášho domu – od prvého kroku až po finálne dokončenie.
 </p>
 
   <div class="w3-row-padding w3-center" style="margin-top:64px">
     <div class="w3-quarter">
       <i class="fa fa-home w3-margin-bottom w3-jumbo w3-center"></i>
-      <p class="w3-large">Overené riešenia</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      <p class="w3-large">Rýchlosť</p>
+      <p>bývanie pripravené v priebehu niekoľkých týždňov.</p>
     </div>
     <div class="w3-quarter">
       <i class="fa fa-address-book w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Individuálny prístup</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      <p class="w3-large">Poctivé materiály</p>
+      <p>drevo, prírodné izolácie a dôkladné spracovanie.</p>
     </div>
     <div class="w3-quarter">
       <i class="fa fa-paper-plane w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Rýchle doručenie</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      <p class="w3-large">Dostupnosť</p>
+      <p>férová cena bez kompromisov v kvalite.</p>
     </div>
     <div class="w3-quarter">
       <i class="fa fa-wrench w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Značka kvality</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      <p class="w3-large">Mobilita</p>
+      <p>možnosť premiestniť dom bez potreby novej výstavby.</p>
     </div>
+    <p class="w3-large" style="width: 70%;margin-left: 15%;">Moderné bývanie nemusí byť zložité ani drahé. Naopak – môže byť inteligentne navrhnuté,
+ekologické a pripravené na život v rovnováhe s prírodou.</p>
   </div>
 </div>
 
@@ -133,16 +145,117 @@ Veríme, že dom nie je len stavba, ale miesto, kde vznikajú spomienky.
 
 <!-- Team Section -->
 <div class="w3-container" style="padding:128px 16px" id="team">
-  <h3 class="w3-center">Vyberte si svoj vysnívaný MyCabinHouse</h3> <!--Modely-->
-  <p class="w3-center w3-large">Ponúkame tri základné modely modulových domov, ktoré sa dajú prispôsobiť vašim potrebám a štýlu života.</p>
+  <h2 class="w3-center" style="font-weight: bold;">Modulové domy</h2> <!--Modely-->
+  <h3 class="w3-center w3-large" style="width: 70%;margin-left: 15%;">Naše modulové domy vyrábame s dôrazom na kvalitné materiály a precízne spracovanie.
+Každý modul je navrhnutý tak, aby ho bolo možné jednoducho rozšíriť o ďalšie moduly alebo
+presťahovať na iný pozemok.
+Domy ponúkame v štandardnej aj prémiovej výbave, podľa individuálnych potrieb zákazníka.</h3>
+
+
+<table style="width: 70%;margin-left: 15%;">
+  <tr>
+    <th style="width:50%">Features</th>
+    <th>Štandardná verzia</th>
+    <th>Premiová verzia</th>
+  </tr>
+  <tr>
+    <td>kompletne zateplenú fasádu podľa výberu zákazníka</td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+  <tr>
+    <td>okná a dvere</td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+  <tr>
+    <td>predpripravenú elektroinštaláciu a vodoinštaláciu</td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+  <tr>
+    <td>predpripravenú podlahu na finálnu krytinu</td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+  <tr>
+    <td>vymaľované steny (na bielo)</td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+  <tr>
+    <td>predpripravené stropné vykurovanie</td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+  <tr>
+    <td>predprípravu na klimatizáciu</td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+  <tr>
+    <td>interiérové dvere (krídlové alebo zásuvné)</td>
+    <td><i class="fa fa-remove"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+  <tr>
+    <td>finálne podlahy podľa výberu zákazníka</td>
+    <td><i class="fa fa-remove"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+  <tr>
+    <td>WC, umývadlá, sprchu</td>
+    <td><i class="fa fa-remove"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+  <tr>
+    <td>kuchynskú linku</td>
+    <td><i class="fa fa-remove"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+  <tr>
+    <td>svietidlá, zásuvky a vypínače</td>
+    <td><i class="fa fa-remove"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+  <tr>
+    <td>klimatizáciu</td>
+    <td><i class="fa fa-remove"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+   <tr>
+    <td>terasu</td>
+    <td><i class="fa fa-remove"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+
+   <tr>
+    <td>exteriérové žalúzie alebo rolety</td>
+    <td><i class="fa fa-remove"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+</table>
+
   <div class="w3-row-padding w3-grayscale" id='modely-wrapper'style="margin-top:64px">
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
         <img src="src/donovaly.jpeg" alt="John" style="width:100%">
         <div class="w3-container">
-          <h3>Model Donovaly</h3>
+          <h3>ECO 35</h3>
           <p class="w3-opacity">25m²</p>
-          <p>Perfektný ako rekreačná chata alebo štartovací dom. Kompaktný, praktický a útulný.</p>
+          <p>Úsporný, praktický a jednoduchý modulový dom pre jednotlivcov alebo páry.
+              Ideálny ako víkendové bývanie, hosťovský dom alebo štartovací domov.
+              Vyrobený z poctivých prírodných materiálov, dodaný za 4 týždne.
+          </p>
+          <ul>
+              <li>Rozmer 10x4</li>
+              <li>Úžitková plocha 34 m2</li>
+              <li>Ideálny pre jednotlivcov alebo páry</li>
+              <li>Možnosť rozšírenia o ďalší modul alebo terasu</li>
+              <li>Dodaný za 4 týždne</li>  
+              <li>Možnosť dodať v prémiovej výbave</li>  
+              <li>Mobilný</li>  
+            </ul>
           <p><button class="w3-button w3-light-grey w3-block"><i class="	fa fa-wrench"></i> Konfigurovať</button></p>
         </div>
       </div>
@@ -151,9 +264,22 @@ Veríme, že dom nie je len stavba, ale miesto, kde vznikajú spomienky.
       <div class="w3-card">
         <img src="src/lomnica.jpg" alt="Jane" style="width:100%">
         <div class="w3-container">
-          <h3>Model Lomnica</h3>
+          <h3>COMPACT 70</h3>
           <p class="w3-opacity">50m²</p>
-          <p>Ideálne riešenie pre komfortné bývanie alebo prázdninový domček pre rodinu.</p>
+          <p>Kompaktný a funkčne navrhnutý modulový dom v tvare L, ktorý ponúka ideálny pomer
+          priestoru, ceny a komfortu.
+          Dostatočne priestranný pre menšiu rodinu, s možnosťou rozšírenia o terasu. Dodaný za 6-8
+          týždňov.
+          </p>
+          <ul>
+              <li>Rozmer 2x10x4</li>
+              <li>Úžitková plocha ...m2</li>
+              <li>Ideálne pre 3-4 člennú rodinu</li>
+              <li>Možnosť pridať terasu, aj zastrešené parkovanie</li>
+              <li>Dodaný za 6-8 týždňov</li>  
+              <li>Možnosť dodať v prémiovej výbave</li>  
+              <li>Mobilný</li>  
+            </ul>
           <p><button class="w3-button w3-light-grey w3-block"><i class="	fa fa-wrench"></i> Konfigurovať</button></p>
         </div>
       </div>
@@ -162,9 +288,23 @@ Veríme, že dom nie je len stavba, ale miesto, kde vznikajú spomienky.
       <div class="w3-card">
         <img src="src/chopok.jpeg" alt="Mike" style="width:100%">
         <div class="w3-container">
-          <h3>Model Chopok</h3>
+          <h3>FAMILY 80</h3>
           <p class="w3-opacity">65m²</p>
-          <p>Plnohodnotné bývanie so všetkým, čo potrebujete. Priestranný, moderný a štýlový.</p>
+          <p>Priestranný a atraktívny modulový dom určený pre celoročné bývanie.
+Obsahuje dve detské izby, spálňu, obývačku s kuchyňou a dostatok úložného priestoru.
+Vďaka prepojeniu dvoch modulov ponúka variabilné riešenie s možnosťou rozšírenia o
+terasy alebo prestrešené parkovanie.
+Ideálny pre rodiny, ktoré hľadajú pohodlie, kvalitu a udržateľnosť v jednom. Dodaný za 6-8
+týždňov.</p>
+            <ul>
+              <li>Rozmer 2x10x4</li>
+              <li>Úžitková plocha ...m2</li>
+              <li>Ideálne pre 3-4 člennú rodinu</li>
+              <li>Možnosť pridať terasu, aj zastrešené parkovanie</li>
+              <li>Dodaný za 6-8 týždňov</li>  
+              <li>Možnosť dodať v prémiovej výbave</li>  
+              <li>Mobilný</li>  
+            </ul>
           <p><button class="w3-button w3-light-grey w3-block"><i class="	fa fa-wrench"></i> Konfigurovať</button></p>
         </div>
       </div>
@@ -189,13 +329,15 @@ Veríme, že dom nie je len stavba, ale miesto, kde vznikajú spomienky.
 <div class="w3-container w3-light-grey" style="padding:128px 16px">
   <div class="w3-row-padding">
     <div class="w3-col m6">
-      <h3>Náš tím</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+      <h3>Flexibilita a mobilita ako životný prístup</h3>
+      <p>Život je nevyspytateľný – prináša zmeny, nové príležitosti aj výzvy. MODULMAX domy sú
+navrhnuté tak, aby sa im dokázali prispôsobiť.
+Vďaka konštrukcii a technickému riešeniu je možné dom kedykoľvek presťahovať na nové
+miesto – či už kvôli zmene bývania, práci, podnikaniu alebo investičnému zámeru.
+To, čo dnes slúži ako rodinný dom, sa zajtra môže stať víkendovou chatou, prenajímateľným
+objektom alebo podnikateľským modulom.
+MODULMAX tak prináša slobodu, ktorá presahuje tradičné vnímanie bývania – dom, ktorý
+rastie, mení sa a cestuje spolu s vami.
       
       </p>
       <p><a href="#work" class="w3-button w3-black" style="border-radius: 1vh;"><i class="fa fa-th" > </i> View Our Works</a></p>
@@ -275,10 +417,181 @@ Veríme, že dom nie je len stavba, ale miesto, kde vznikajú spomienky.
 </div>
 
 <!-- Skills Section -->
+<div class="w3-container" style="display: inline-block;width: 100%;margin-left: 4%;height: 110vh;" id="sluzby">
+  <h1 class="w3-center" style="padding-top: 5vh;padding-bottom:5vh;border-bottom: 2px solid rgba(122, 122, 122, 0.362);">Naše služby</h1> <!--Kontakt-->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h2 style="margin: 1vh;height: 15vh;border-bottom: 2px solid rgba(9, 9, 9, 0.275);">Administratívna pomoc</h2> 
+         <i class="fa fa-archive w3-margin-bottom w3-jumbo"></i>
+         <p>Postaráme sa o všetky administratívne náležitosti potrebné na osadenie modulového domu.
+Zariadime povolenia, komunikáciu s úradmi aj technické podklady – rýchlo, spoľahlivo a bez
+zbytočného stresu.</p>
+      </div>
+      <div class="flip-card-back">
+        <h1>Pomoc s povoleniami a dokumentáciou</h1> 
+        <p style="margin: 10px;">Vieme, že proces získania povolení na osadenie modulového domu môže byť zložitý a
+časovo náročný. Preto sme pre našich zákazníkov pripravili službu „na kľúč“, vďaka ktorej
+sa postaráme o všetku potrebnú administratívu – od prvotnej konzultácie až po kompletné
+vybavenie povolení.
+Pomôžeme vám so všetkými dokumentmi, komunikáciou s úradmi aj technickými podkladmi,
+aby ste sa mohli sústrediť na to podstatné – výber a plánovanie vášho nového bývania.
+Naším cieľom je, aby cesta k vášmu novému modulovému domu bola jednoduchá, rýchla a
+bez zbytočného stresu.</p> 
+  
+      </div>
+    </div>
+  </div>
+   <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+         <h2 style="margin: 1vh;height: 15vh;border-bottom: 2px solid rgba(9, 9, 9, 0.275);">Príprava základov a sietí</h2> 
+         <i class="	fa fa-building w3-margin-bottom w3-jumbo"></i>
+         <p style="margin: 10px;">Zabezpečíme realizáciu základových pätiek alebo dosky a prípojok vody, elektriny či odpadu.
+Práce prebiehajú v súlade s projektom a koordinovane s výrobou domu, aby montáž
+prebehla hladko a bez zdržania.</p>
+      </div>
+      <div class="flip-card-back">
+        <h1>Kompletná predpríprava pozemku</h1> 
+        <p style="margin: 10px;">Každý modulový dom doručíme a osadíme priamo na váš pozemok, vrátane pripojenia na
+pripravené inžinierske siete.
+Základy a prípojky si zákazník štandardne zabezpečuje vo vlastnej réžii, avšak pre tých, ktorí
+chcú mať celý proces bez starostí, ponúkame aj možnosť ich kompletného vyhotovenia na
+kľúč.
+Naša služba zahŕňa návrh a realizáciu základových pätiek alebo dosky, prípravu prívodov
+vody, elektriny a odpadu a presné zameranie podľa projektovej dokumentácie.
+
+Vďaka tomu zabezpečíme, že váš nový modulový dom bude osadený rýchlo, presne a bez
+komplikácií – pripravený na okamžité bývanie.
+        </p> 
+      </div>
+    </div>
+  </div>
+   <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+         <h2 style="margin: 1vh;height: 15vh;border-bottom: 2px solid rgba(9, 9, 9, 0.275);">Výbava interiéru</h2> 
+         <i class="fa fa-shower w3-margin-bottom w3-jumbo"></i>
+         <p style="margin: 10px;">Dom si môžete objednať ako holostavbu alebo plne zariadený interiér.
+Pomôžeme vám s výberom podláh, sanity, kuchyne aj nábytku – tak, aby bol dom funkčný a
+harmonicky zladený.</p>
+      </div>
+      <div class="flip-card-back">
+        <h1>Zariadenie podľa vašich predstáv</h1> 
+        <p style="margin: 10px;">Radi prevezmeme starostlivosť aj o kompletné zariadenie vášho nového domova. Spolu s
+vami vyberieme podlahy, obklady, sanitu, kuchynskú linku, osvetlenie aj nábytok tak, aby
+každý prvok ladil do jednotného štýlu. Spolupracujeme s overenými dodávateľmi a
+dizajnérmi, ktorí dbajú na kvalitu spracovania aj estetiku. Výsledkom je interiér, ktorý odráža
+váš vkus, poskytuje maximálny komfort a je pripravený na okamžité nasťahovanie.
+      </p> 
+      </div>
+    </div>
+  </div>
+   <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+         <h2 style="margin: 1vh;height: 15vh;border-bottom: 2px solid rgba(9, 9, 9, 0.275);">Servis a údržba</h2> 
+         <i class="fa fa-wrench w3-margin-bottom w3-jumbo"></i>
+         <p style="margin: 10px;">Zostávame vám k dispozícii aj po montáži.
+Poskytujeme servisné práce, odborné poradenstvo a pravidelné kontroly, aby váš dom zostal
+v perfektnom stave dlhé roky.</p>
+      </div>
+      <div class="flip-card-back">
+        <h1>Starostlivosť po odovzdaní</h1> 
+        <p style="margin: 10px;">Naša starostlivosť o zákazníka nekončí odovzdaním domu. Poskytujeme záručný aj
+pozáručný servis, odborné poradenstvo a pravidelné kontroly technického stavu modulov. V
+prípade potreby zabezpečíme opravy, údržbu či modernizáciu vybavenia. Cieľom je, aby váš
+dom zostal funkčný, bezpečný a spoľahlivý po celé roky používania.
+      </p> 
+      </div>
+    </div>
+  </div>
+</div>
+<div class="w3-container" style="display: inline-block;background-color: rgb(255, 255, 255);width: 100%;border-bottom: 2px solid rgba(128, 128, 128, 0.425);padding-bottom: 2vh;" id="process">
+  <h2 style="text-align: center;">Ako to funguje:</h2>
+
+<button class="accordion">Krok 1: Výber modulového domu</button>
+<div class="panel">
+  <p>Vyberte si model a veľkosť, ktorá zodpovedá vašim predstavám o bývaní.
+Zvoľte si variant výbavy – štandardnú alebo prémiovú.</p>
+<p id="more1" style="display: none;">V prvom kroku si zákazník vyberie typ modulového domu, ktorý najviac vyhovuje jeho
+potrebám, a rozhodne sa pre variant výbavy – štandardnú alebo prémiovú. Následne môže
+odoslať objednávku priamo cez web alebo nás kontaktovať osobne, ak chce najskôr prebrať
+možnosti a získať viac informácií.</p>
+<button onclick="showMore(1)" class="showMore" id="showMore1">Zobraziť viac</button>
+</div>
+
+<button class="accordion">Krok 2: Kontakt a konzultácia</button>
+<div class="panel">
+  <p>Po odoslaní dopytu sa vám ozveme do 24 hodín.
+Spoločne doladíme detaily a navrhneme optimálne riešenie.</p>
+<p id="more2" style="display: none;">(Po prijatí objednávky alebo dopytu sa s klientom spojíme do 24 hodín. Nasleduje
+konzultácia, počas ktorej spoločne prejdeme všetky detaily – od dispozičných požiadaviek až
+po technické riešenia. Komunikácia je v tomto procese kľúčová – naším cieľom je pochopiť
+potreby zákazníka a nájsť preňho najvhodnejšie riešenie.)</p>
+ <button onclick="showMore(2)"  class="showMore" id="showMore2">Zobraziť viac</button>
+</div>
+
+<button class="accordion">Krok 3: Obhliadka pozemku (ak je potrebná)</button>
+<div class="panel">
+  <p>Overíme technické možnosti osadenia domu a odporučíme najvhodnejšie riešenie pripojenia
+na siete.</p>
+<p id="more3" style="display: none;">Ak si to situácia vyžaduje, vykonáme osobnú obhliadku pozemku, aby sme preverili jeho
+pripravenosť a technické možnosti osadenia modulového domu. Posúdime prístupovú cestu,
+sklon terénu, orientáciu pozemku a dostupnosť inžinierskych sietí. Na základe zistených
+údajov vám odporučíme najvhodnejšie riešenie pre základy, pripojenie na siete a
+umiestnenie domu tak, aby bol výsledok funkčný, estetický a technicky bezproblémový.</p>
+<button onclick="showMore(3)" class="showMore" id="showMore3">Zobraziť viac</button>
+</div>
+<button class="accordion">Krok 4: Zmluva a záloha</button>
+<div class="panel">
+  <p>Po odsúhlasení detailov podpíšeme zmluvu a po úhrade zálohy vo výške 50 % začíname s
+výrobou.</p> 
+<p id="more4" style="display: none;">Po vzájomnom odsúhlasení všetkých detailov pripravíme zmluvu o dielo, ktorá jasne
+definuje rozsah dodávky, cenu aj termín realizácie. Po jej podpise zákazník uhradí zálohu vo
+výške 50 % z celkovej sumy, čím sa projekt oficiálne spúšťa do výroby. Tento krok je dôležitý
+pre zabezpečenie všetkých materiálov, rezerváciu výrobných kapacít a naplánovanie
+logistiky, aby celý proces prebehol plynulo a bez zdržania. </p>
+<button onclick="showMore(4)" class="showMore" id="showMore4">Zobraziť viac</button>
+</div>
+
+<button class="accordion">Krok 5: Výroba a príprava</button>
+<div class="panel" style="display: inline;">
+  <p>Dom vyrobíme v našej hale v priebehu 4–8 týždňov.
+Ak využijete riešenie na kľúč, súbežne pripravíme aj základy a prípojky.</p>
+<p id="more5" style="display: none;">Po prijatí zálohy sa začína samotná výroba vášho modulového domu v našej výrobnej hale
+na Slovensku. Každý modul je zhotovený s dôrazom na kvalitu spracovania, presnosť
+detailov a používanie certifikovaných prírodných materiálov. Počas výroby je možné dom
+osobne navštíviť a pozrieť si priebeh montáže. Ak ste si zvolili realizáciu na kľúč, súčasne s
+výrobou domu prebieha aj príprava základov a inžinierskych sietí, aby bolo možné dom po
+dokončení okamžite osadiť a pripojiť.</p>
+<button onclick="showMore(5)" class="showMore" id="showMore5">Zobraziť viac</button>
+</div>
+
+<button class="accordion">Krok 6: Doručenie a osadenie</button>
+<div class="panel">
+  <p>Dom dovezieme, osadíme a pripojíme na siete.
+Po odovzdaní projektu je váš nový dom pripravený na bývanie.</p> 
+<p id="more6" style="display: none;">Po dokončení výroby zabezpečíme dopravu hotového modulu priamo na váš pozemok. Na
+mieste ho pomocou techniky osadíme na pripravené základy, pripojíme na inžinierske siete a
+vykonáme všetky potrebné finálne úpravy. Nasleduje administratívne odovzdanie stavby,
+počas ktorého sa spoločne uistíme, že je všetko v súlade s vašimi očakávaniami. Po
+podpísaní protokolu o prevzatí je dom pripravený na okamžité užívanie – môžete sa
+nasťahovať a začať si užívať nové, komfortné bývanie.</p>
+<button onclick="showMore(6)"  class="showMore" id="showMore6">Zobraziť viac</button>
+</div>
 
 
+</div>
+<div class="w3-container" style="display: inline-block;background-color: rgb(62, 62, 62);color:white;width: 100%;height: 60vh;border-bottom: 2px solid rgba(128, 128, 128, 0.425);padding-bottom: 2vh;" id="configurator-info">
+  <p>Pre ešte väčšiu mieru slobody a personalizácie pripravujeme online konfigurátor, v ktorom
+si zákazník bude môcť v reálnom čase navrhnúť svoj dom podľa vlastných potrieb a
+predstáv.
 
-
+Od výberu veľkosti a dispozície až po materiály, farby, výbavu či doplnky – všetko prehľadne,
+jednoducho a intuitívne.
+Cieľom je, aby si každý mohol vytvoriť svoj unikátny modulový dom, podľa svojich predstáv.</p>
+</div>
 <!-- Contact Section -->
 <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
   <h3 class="w3-center">Spojte sa s nami</h3> <!--Kontakt-->
@@ -338,6 +651,15 @@ function w3_open() {
 // Close the sidebar with the close button
 function w3_close() {
     mySidebar.style.display = "none";
+}
+
+function showMore(step){
+
+    let text_id = "more" + step;
+    let text = document.getElementById(text_id);
+    text.style.display = "inline-block";
+
+
 }
 </script>
 
