@@ -13,7 +13,7 @@ p, h3, h1, h2, a ,html, body{
   z-index: 1;
 }
 #logo{
-  margin-left: 43%;
+  margin-left: 2%;
   margin-top: 2vh;
 }
 .konfigurator-button{
@@ -30,13 +30,13 @@ p, h3, h1, h2, a ,html, body{
     font-size: 2.5vh;
     border: none;
     text-align: left;
-    background-color: rgb(46, 111, 96);
+    background-color: #FFC107;
     color: white;
 }
 .send-inquiry{
     width: 70%;
     height:5vh;
-    background-color: rgb(118, 198, 180);
+    background-color: #FFC107;
     border-radius: 2vh;
     border: none;
     font-size: 2vh;
@@ -45,7 +45,7 @@ p, h3, h1, h2, a ,html, body{
 .send-inquiry:hover{
     width: 70%;
     height:5vh;
-    background-color: rgb(66, 164, 141);
+    background-color: #FFB300;
     border-radius: 2vh;
     border: none;
     font-size: 2vh;
@@ -90,8 +90,8 @@ p, h3, h1, h2, a ,html, body{
     max-width: 30%;
     text-align: center;
     font-weight: bold;
-    border: 2px solid rgb(0, 18, 0);
-    background-color: rgb(39, 124, 100);
+    border: 2px solid #FFB300;
+    background-color: #FFC107;
     padding: 8px;
     margin: 5px;
 }
@@ -104,8 +104,8 @@ p, h3, h1, h2, a ,html, body{
     max-width: 30%;
     text-align: center;
     font-weight: bold;
-    border: 2px solid rgb(0, 18, 0);
-    background-color: rgb(158, 216, 201);
+    border: 2px solid #FFB300;
+    background-color: #FFE082;
     margin: 5px;
 }
 .moznosti-doplnky{
@@ -151,7 +151,7 @@ p, h3, h1, h2, a ,html, body{
     width: 20%;
     text-align: center;
     font-weight: 400;
-    background-color: rgb(158, 216, 201);
+    background-color: #FFE082;
     margin-left: 2px;
     margin-right: 2px;
     margin-top: 2px;
@@ -160,14 +160,14 @@ p, h3, h1, h2, a ,html, body{
 .moznost-doplnok-clicked{
     font-family:sans-serif;
     border-radius: 1vh;
-    border: 3px solid rgb(0, 111, 17);
+    border: 3px solid #FFB300;
     display: block;
     font-size: 1.5vh;
     width: 20%;
     text-align: center;
     font-weight: 400;
     color: white;
-    background-color: rgb(39, 142, 100);
+    background-color: #FFC107;
     margin-left: 2px;
     margin-right: 2px;
     margin-top: 2px;
@@ -237,7 +237,7 @@ p, h3, h1, h2, a ,html, body{
     width: 45%;
     height: 20%;
     font-size: x-large;
-    background-color: rgb(158, 216, 201); 
+    background-color: #FFC107; 
     border: none;
     font-weight: 400;
     border-radius: 15px;
@@ -248,7 +248,7 @@ p, h3, h1, h2, a ,html, body{
     width: 45%;
     height: 20%;
     font-size: x-large;
-    background-color: rgb(66, 155, 131); 
+    background-color: #FFB300; 
     border: none;
     font-weight: 400;
     border-radius: 15px;
@@ -265,7 +265,7 @@ p, h3, h1, h2, a ,html, body{
   font-size: large;
   border-radius: 1vh;
   height: 4em;
-  background-color: rgb(135, 152, 102)!important;
+  background-color: #FFC107!important;
 }
 .configurator-btn-large:hover{
   min-width: 40%;
@@ -274,7 +274,7 @@ p, h3, h1, h2, a ,html, body{
   border: 0px;
   font-size: large;
   border-radius: 1vh;
-  background-color: rgb(115, 184, 145)!important;
+  background-color: #FFB300!important;
 }
 .input-text{
   width: 50% !important;
@@ -310,6 +310,14 @@ p, h3, h1, h2, a ,html, body{
   display: inline-block;
   transition: background-color 0.6s ease;
   margin-top: 3vh;
+}
+
+.dot.active {
+  background-color: #FFC107;
+}
+
+.dot:hover {
+  background-color: #FFE082;
 }
 
 
@@ -490,13 +498,13 @@ tr:nth-child(even) {
 }
 
 .flip-card-back {
-  background-color: rgb(135, 152, 102)!important;
+  background-color: #FFC107!important;
   color: white;
   transform: rotateY(180deg);
   border-radius: 4vh;
 }
 .accordion{
-  background-color: rgb(135, 152, 102);
+  background-color: #FFC107;
   color: white;
   cursor: pointer;
   padding: 18px;
@@ -511,7 +519,7 @@ tr:nth-child(even) {
 }
 .showMore{
   margin-top: 2vh;
-  background-color: rgb(175, 195, 134);
+  background-color: #FFE082;
   border: none;
   border-radius: 1vh;
   padding: 10px;
@@ -520,7 +528,7 @@ tr:nth-child(even) {
 }
 .showMore:hover{
   margin-top: 2vh;
-  background-color: rgb(45, 64, 53);
+  background-color: #FF8F00;
   border: none;
   color: white;
   border-radius: 1vh;

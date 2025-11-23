@@ -244,3 +244,6 @@ function changeBackgroundImg(btn_id){
         image_container.style.backgroundImage = "url('src/image_main_1.jpg')";
     }
 }
+    
+
+

@@ -1,10 +1,28 @@
-
 let img_id = 0;
+const totalSlides = 3;
+let isSliding = false;
 
+function updateDots() {
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach((dot, index) => {
+        dot.classList.remove('active');
+        if (index === img_id) {
+            dot.classList.add('active');
+        }
+    });
+}
 
+function slideCarousel() {
+    const carousel = document.querySelector('.carousel');
+    const translateValue = -img_id * 33.333; // Move by 1/3 of total width
+    carousel.style.transform = `translateX(${translateValue}%)`;
+    updateDots();
+}
 
 function changeBackgroundImg(btn_id){
+    if (isSliding) return;
     
+    isSliding = true;
     
     if (btn_id == 'left'){
         img_id -= 1;
@@ -13,42 +31,37 @@ function changeBackgroundImg(btn_id){
         img_id += 1;
     }
 
+    // Handle dot clicks
+    if(typeof btn_id === 'number'){
+        img_id = btn_id;
+    }
 
-    /*Input from span. Change particular span to active and deactivate rest */
-    if(btn_id == 0){
+    // Wrap around logic
+    if(img_id >= totalSlides){
         img_id = 0;
-        document.getElementById('span-2').style.backgroundColor = 'red !important';
     }
-    if(btn_id == 1){
-        img_id = 1;
-         document.getElementById('span-3').style.backgroundColor =  'red !important';
+    if(img_id < 0){
+        img_id = totalSlides - 1;
     }
-    if(btn_id == -1){
-        img_id = -1;
-         document.getElementById('span-1').style.backgroundColor =  'red !important';
-    }
-
-
-
-    if(img_id > 1){
-        img_id = -1;
-    }
-    if(img_id<-1){
-        img_id = 1;
-    }
-    let image_container = document.getElementById('home');
-    if(img_id == 1){
-        image_container.style.backgroundImage = "url('src/image_main_2.jpg')";
-    }
-    if(img_id == -1){
-        image_container.style.backgroundImage = "url('src/image_main_3.jpg')";
-    }
-    if(img_id == 0){
-        image_container.style.backgroundImage = "url('src/image_main_1.jpg')";
-    }
-    console.log(img_id);
+    
+    slideCarousel();
+    
+    // Reset sliding flag after animation completes
+    setTimeout(() => {
+        isSliding = false;
+    }, 800);
 }
+
+function currentSlide(slideIndex) {
+    changeBackgroundImg(slideIndex - 1);
+}
+
+// Auto-advance slideshow
 setInterval(() => {
-    console.log("Hello, World!");
     changeBackgroundImg('right');
-}, 15000);
+}, 5000);
+
+// Initialize
+document.addEventListener('DOMContentLoaded', function() {
+    updateDots();
+});
