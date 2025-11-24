@@ -471,6 +471,172 @@
             font-size: 14px;
         }
         
+        /* New styles for payment terms and conditions */
+        .payment-info-box {
+            display: flex;
+            gap: 15px;
+            padding: 20px;
+            background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+            border: 1px solid #ffc107;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+        
+        .info-icon {
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        
+        .info-content {
+            flex: 1;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .payment-confirmations {
+            margin-top: 20px;
+        }
+        
+        .terms-section {
+            margin-top: 15px;
+        }
+        
+        .checkbox-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            cursor: pointer;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .checkbox-container input[type="checkbox"] {
+            width: auto;
+            margin: 0;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        
+        .checkbox-text {
+            flex: 1;
+            font-size: 14px;
+        }
+        
+        .terms-link {
+            color: #FFC107;
+            text-decoration: underline;
+            font-weight: 500;
+        }
+        
+        .terms-link:hover {
+            color: #FFB300;
+        }
+        
+        .form-input[type="file"] {
+            padding: 8px 12px;
+            background: white;
+        }
+        
+        .form-input[type="file"]:focus {
+            border-color: #FFC107;
+        }
+        
+        /* Price Calculator Styles */
+        .price-calculator {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border: 2px solid #FFC107;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        
+        .price-breakdown {
+            margin-bottom: 20px;
+        }
+        
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .price-item:last-child {
+            border-bottom: none;
+        }
+        
+        .price-label {
+            font-size: 14px;
+            color: #495057;
+        }
+        
+        .price-value {
+            font-size: 16px;
+            font-weight: 600;
+            color: #28a745;
+        }
+        
+        .price-total {
+            background: rgba(255, 193, 7, 0.1);
+            margin: 10px -15px;
+            padding: 15px;
+            border-radius: 8px;
+            border: none !important;
+        }
+        
+        .price-total .price-label,
+        .price-total .price-value {
+            font-size: 18px;
+            color: #333;
+        }
+        
+        .price-total-vat {
+            background: rgba(40, 167, 69, 0.1);
+            margin: 10px -15px;
+            padding: 15px;
+            border-radius: 8px;
+            border: none !important;
+        }
+        
+        .price-total-vat .price-label,
+        .price-total-vat .price-value {
+            font-size: 16px;
+            color: #28a745;
+        }
+        
+        .advance-payment {
+            background: rgba(255, 107, 53, 0.1);
+            margin: 15px -15px -10px;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .advance-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .advance-label {
+            font-size: 16px;
+            font-weight: 600;
+            color: #FF6B35;
+        }
+        
+        .advance-amount {
+            font-size: 20px;
+            font-weight: bold;
+            color: #FF6B35;
+        }
+        
+        .price-note-calculator {
+            text-align: center;
+            color: #6c757d;
+            font-style: italic;
+        }
+        
         @media screen and (max-width: 768px) {
             .detailed-form-container {
                 padding: 10px;
@@ -819,12 +985,12 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label>Pripravenosť podkladu *</label>
-                        <select class="form-select" required>
-                            <option value="">Vyberte typ podkladu</option>
-                            <option value="betonova_doska">Betónová doska</option>
-                            <option value="betonove_pasy">Betónové pásy</option>
-                            <option value="zemne_skrutky">Zemné skrutky</option>
-                            <option value="bez_podkladu">Bez pripraveného podkladu - potrebujem realizáciu od vás</option>
+                        <select class="form-select" required onchange="calculatePrice()" data-price-category="foundation">
+                            <option value="" data-price="0">Vyberte typ podkladu</option>
+                            <option value="betonova_doska" data-price="0">Betónová doska</option>
+                            <option value="betonove_pasy" data-price="0">Betónové pásy</option>
+                            <option value="zemne_skrutky" data-price="0">Zemné skrutky</option>
+                            <option value="bez_podkladu" data-price="5000">Bez pripraveného podkladu - potrebujem realizáciu od vás (+5 000 €)</option>
                         </select>
                     </div>
                 </div>
@@ -854,10 +1020,10 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label>Realizácia základov *</label>
-                        <select class="form-select" id="zaklady-select" required onchange="toggleZakladyOptions()">
-                            <option value="">Vyberte možnosť</option>
-                            <option value="mam">Mám pripravené/pripravím si ich sám</option>
-                            <option value="potrebujem">Nemám - potrebujem realizáciu od Vás</option>
+                        <select class="form-select" id="zaklady-select" required onchange="toggleZakladyOptions(); calculatePrice()" data-price-category="foundation">
+                            <option value="" data-price="0">Vyberte možnosť</option>
+                            <option value="mam" data-price="0">Mám pripravené/pripravím si ich sám</option>
+                            <option value="potrebujem" data-price="8000">Nemám - potrebujem realizáciu od Vás (+8 000 €)</option>
                         </select>
                     </div>
                 </div>
@@ -882,12 +1048,12 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label>Materiál fasády</label>
-                        <select class="form-select">
-                            <option value="">Vyberte materiál</option>
-                            <option value="drevo">Drevo - sibírsky smrekovec</option>
-                            <option value="omietka">Silikónová omietka</option>
-                            <option value="plech">Falcovaný plech</option>
-                            <option value="iny">Iný</option>
+                        <select class="form-select" onchange="calculatePrice()" data-price-category="exterior">
+                            <option value="" data-price="0">Vyberte materiál</option>
+                            <option value="drevo" data-price="3500">Drevo - sibírsky smrekovec (+3 500 €)</option>
+                            <option value="omietka" data-price="0">Silikónová omietka (štandard)</option>
+                            <option value="plech" data-price="2800">Falcovaný plech (+2 800 €)</option>
+                            <option value="iny" data-price="0">Iný</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -905,11 +1071,11 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label>Terasa</label>
-                        <select class="form-select">
-                            <option value="">Bez terasy</option>
-                            <option value="mala">Malá terasa (4x3m)</option>
-                            <option value="velka">Veľká terasa (4x5m)</option>
-                            <option value="zastresenie">Zastrešenie terasy</option>
+                        <select class="form-select" onchange="calculatePrice()" data-price-category="exterior">
+                            <option value="" data-price="0">Bez terasy</option>
+                            <option value="mala" data-price="4500">Malá terasa (4x3m) (+4 500 €)</option>
+                            <option value="velka" data-price="7500">Veľká terasa (4x5m) (+7 500 €)</option>
+                            <option value="zastresenie" data-price="2500">Zastrešenie terasy (+2 500 €)</option>
                         </select>
                     </div>
                 </div>
@@ -918,25 +1084,25 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label>Typ okien</label>
-                        <select class="form-select">
-                            <option value="">Štandardné okná</option>
-                            <option value="trojsklo">Trojsklo</option>
+                        <select class="form-select" onchange="calculatePrice()" data-price-category="exterior">
+                            <option value="" data-price="0">Štandardné okná</option>
+                            <option value="trojsklo" data-price="1800">Trojsklo (+1 800 €)</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label>Dvere</label>
-                        <select class="form-select">
-                            <option value="">Štandardné dvere</option>
-                            <option value="posuvne">Posuvné dvere (HS portál)</option>
+                        <select class="form-select" onchange="calculatePrice()" data-price-category="exterior">
+                            <option value="" data-price="0">Štandardné dvere</option>
+                            <option value="posuvne" data-price="2200">Posuvné dvere (HS portál) (+2 200 €)</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label>Exteriérové rolety</label>
-                        <select class="form-select">
-                            <option value="">Bez roliet</option>
-                            <option value="ano">Áno, chcem exteriérové rolety</option>
+                        <select class="form-select" onchange="calculatePrice()" data-price-category="exterior">
+                            <option value="" data-price="0">Bez roliet</option>
+                            <option value="ano" data-price="3200">Áno, chcem exteriérové rolety (+3 200 €)</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -954,12 +1120,12 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label>Typ podláh</label>
-                        <select class="form-select">
-                            <option value="">Bez podláh</option>
-                            <option value="plavajuca">Plávajúca podlaha</option>
-                            <option value="vinylova">Vinylová podlaha</option>
-                            <option value="parkety">Drevené parkety</option>
-                            <option value="dlazba">Dlažba</option>
+                        <select class="form-select" onchange="calculatePrice()" data-price-category="interior">
+                            <option value="" data-price="0">Bez podláh</option>
+                            <option value="plavajuca" data-price="2800">Plávajúca podlaha (+2 800 €)</option>
+                            <option value="vinylova" data-price="3200">Vinylová podlaha (+3 200 €)</option>
+                            <option value="parkety" data-price="5500">Drevené parkety (+5 500 €)</option>
+                            <option value="dlazba" data-price="3800">Dlažba (+3 800 €)</option>
                         </select>
                     </div>
                 </div>
@@ -983,84 +1149,212 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label>Kuchynská linka</label>
-                        <select class="form-select">
-                            <option value="">Bez kuchyne</option>
-                            <option value="ano">Áno, chcem kuchynskú linku</option>
+                        <select class="form-select" onchange="calculatePrice()" data-price-category="interior">
+                            <option value="" data-price="0">Bez kuchyne</option>
+                            <option value="ano" data-price="8500">Áno, chcem kuchynskú linku (+8 500 €)</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label>Kuchynské spotrebiče</label>
-                        <select class="form-select">
-                            <option value="">Bez spotrebičov</option>
-                            <option value="zakladne">Základné (chladnička, varná doska, rúra)</option>
+                        <select class="form-select" onchange="calculatePrice()" data-price-category="interior">
+                            <option value="" data-price="0">Bez spotrebičov</option>
+                            <option value="zakladne" data-price="3500">Základné (chladnička, varná doska, rúra) (+3 500 €)</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label>Dvere so zárubňami</label>
-                        <select class="form-select">
-                            <option value="">Bez vnútorných dverí</option>
-                            <option value="ano">Áno, chcem dvere so zárubňami</option>
+                        <select class="form-select" onchange="calculatePrice()" data-price-category="interior">
+                            <option value="" data-price="0">Bez vnútorných dverí</option>
+                            <option value="ano" data-price="1800">Áno, chcem dvere so zárubňami (+1 800 €)</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label>Krb</label>
-                        <select class="form-select">
-                            <option value="">Bez krbu</option>
-                            <option value="ano">Áno, chcem krb</option>
+                        <select class="form-select" onchange="calculatePrice()" data-price-category="interior">
+                            <option value="" data-price="0">Bez krbu</option>
+                            <option value="ano" data-price="4500">Áno, chcem krb (+4 500 €)</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label>Klimatizácia</label>
-                        <select class="form-select">
-                            <option value="">Bez klimatizácie</option>
-                            <option value="ano">Áno, chcem klimatizáciu</option>
+                        <select class="form-select" onchange="calculatePrice()" data-price-category="interior">
+                            <option value="" data-price="0">Bez klimatizácie</option>
+                            <option value="ano" data-price="2800">Áno, chcem klimatizáciu (+2 800 €)</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label>Osvetlenie</label>
-                        <select class="form-select">
-                            <option value="">Bez osvetlenia</option>
-                            <option value="zakladne">Základné osvetlenie</option>
-                            <option value="kompletne">Kompletné osvetlenie</option>
+                        <select class="form-select" onchange="calculatePrice()" data-price-category="interior">
+                            <option value="" data-price="0">Bez osvetlenia</option>
+                            <option value="zakladne" data-price="1200">Základné osvetlenie (+1 200 €)</option>
+                            <option value="kompletne" data-price="2500">Kompletné osvetlenie (+2 500 €)</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label>Vypínače, zásuvky</label>
-                        <select class="form-select">
-                            <option value="">Bez vypínačov a zásuviek</option>
-                            <option value="ano">Áno, chcem vypínače a zásuvky</option>
+                        <select class="form-select" onchange="calculatePrice()" data-price-category="interior">
+                            <option value="" data-price="0">Bez vypínačov a zásuviek</option>
+                            <option value="ano" data-price="800">Áno, chcem vypínače a zásuvky (+800 €)</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label>Interiérové žalúzie</label>
-                        <select class="form-select">
-                            <option value="">Bez žalúzií</option>
-                            <option value="ano">Áno, chcem interiérové žalúzie</option>
+                        <select class="form-select" onchange="calculatePrice()" data-price-category="interior">
+                            <option value="" data-price="0">Bez žalúzií</option>
+                            <option value="ano" data-price="1500">Áno, chcem interiérové žalúzie (+1 500 €)</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label>Sanita</label>
-                        <select class="form-select">
-                            <option value="">Bez sanity</option>
-                            <option value="zakladna">Základná sanita (sprchový kút, WC, umývadlo)</option>
+                        <select class="form-select" onchange="calculatePrice()" data-price-category="interior">
+                            <option value="" data-price="0">Bez sanity</option>
+                            <option value="zakladna" data-price="3800">Základná sanita (sprchový kút, WC, umývadlo) (+3 800 €)</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label>Solárne panely</label>
-                        <select class="form-select">
-                            <option value="">Bez solárnych panelov</option>
-                            <option value="ano">Áno, chcem solárne panely</option>
+                        <select class="form-select" onchange="calculatePrice()" data-price-category="interior">
+                            <option value="" data-price="0">Bez solárnych panelov</option>
+                            <option value="ano" data-price="6500">Áno, chcem solárne panely (+6 500 €)</option>
                         </select>
                     </div>
                 </div>
+            </div>
+
+            <!-- Price Calculator -->
+            <div class="form-section">
+                <h3>Kalkulácia ceny</h3>
+                
+                <div class="price-calculator">
+                    <div class="price-breakdown">
+                        <div class="price-item">
+                            <span class="price-label">Základná cena domu:</span>
+                            <span class="price-value" id="base-price">42 000 €</span>
+                        </div>
+                        
+                        <div class="price-item">
+                            <span class="price-label">Základy a prípojky:</span>
+                            <span class="price-value" id="foundation-price">0 €</span>
+                        </div>
+                        
+                        <div class="price-item">
+                            <span class="price-label">Exteriérová výbava:</span>
+                            <span class="price-value" id="exterior-price">0 €</span>
+                        </div>
+                        
+                        <div class="price-item">
+                            <span class="price-label">Interiérová výbava:</span>
+                            <span class="price-value" id="interior-price">0 €</span>
+                        </div>
+                        
+                        <div class="price-item price-total">
+                            <span class="price-label"><strong>Celková cena bez DPH:</strong></span>
+                            <span class="price-value"><strong id="total-price">42 000 €</strong></span>
+                        </div>
+                        
+                        <div class="price-item price-total-vat">
+                            <span class="price-label"><strong>Celková cena s DPH (20%):</strong></span>
+                            <span class="price-value"><strong id="total-price-vat">50 400 €</strong></span>
+                        </div>
+                        
+                        <div class="advance-payment">
+                            <div class="advance-info">
+                                <span class="advance-label">Zálohová platba (50%):</span>
+                                <span class="advance-amount" id="advance-payment">21 000 €</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="price-note-calculator">
+                        <small>* Ceny sú orientačné a môžu sa líšiť v závislosti od konkrétnej konfigurácie a miestnych podmienok</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Information -->
+            <div class="form-section">
+                <h3>Dodatočné informácie (voliteľné)</h3>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Nahrať súbory</label>
+                        <input type="file" class="form-input" multiple accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
+                        <small style="color: #666; font-size: 12px;">Môžete priložiť pôdorysy, fotografie pozemku, alebo iné relevantné dokumenty</small>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Požiadavky zákazníka</label>
+                        <textarea class="form-input" rows="4" placeholder="Opíšte vaše špecifické požiadavky, pripomienky alebo otázky..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Terms -->
+            <div class="form-section">
+                <h3>Platobné podmienky</h3>
+                
+                <div class="payment-info-box">
+                    <div class="info-icon">ℹ️</div>
+                    <div class="info-content">
+                        <strong>Dôležité informácie o platbe:</strong><br>
+                        Výroba Vášho modulového domu začne až po uhradení zálohovej platby vo výške 50% z celkovej sumy. Zálohová faktúra Vám bude vystavená po skontrolovaní objednávky a nadviazaní kontaktu.
+                    </div>
+                </div>
+                
+                <div class="payment-confirmations">
+                    <div class="form-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" required>
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text">Potvrdzujem, že som oboznámený s povinnou zálohovou platbou vo výške 50% z celkovej sumy a súhlasím s jej úhradou do 5 dní od vystavenia zálohovej faktúry *</span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" required>
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text">Beriem na vedomie, že po začatí výroby je záloha nevratná *</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Terms and Conditions -->
+            <div class="form-section">
+                <h3>Podmienky a dokumenty</h3>
+                
+                <div class="terms-section">
+                    <div class="form-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" required>
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text">Súhlasím s <a href="#" class="terms-link">obchodnými podmienkami</a> *</span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" required>
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text">Súhlasím so spracovaním osobných údajov v súlade s <a href="#" class="terms-link">GDPR</a> *</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <p class="form-note" style="margin-top: 20px; font-size: 12px; color: #888;">
+                    * Povinné políčka - bez ich označenia nebude možné odoslať objednávku
+                </p>
             </div>
 
             <!-- Submit Button -->
@@ -1200,7 +1494,48 @@ document.addEventListener('DOMContentLoaded', function() {
     if (orderForm) {
         orderForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Objednávka bola úspešne odoslaná! Budeme Vás kontaktovať do 24 hodín.');
+            
+            // Check all required checkboxes
+            const requiredCheckboxes = orderForm.querySelectorAll('input[type="checkbox"][required]');
+            let allChecked = true;
+            let missingCheckboxes = [];
+            
+            requiredCheckboxes.forEach(checkbox => {
+                if (!checkbox.checked) {
+                    allChecked = false;
+                    // Get the label text for better error message
+                    const labelText = checkbox.closest('.checkbox-container') ? 
+                        checkbox.closest('.checkbox-container').querySelector('.checkbox-text').textContent.substring(0, 50) + '...' :
+                        'Povinné súhlasy';
+                    missingCheckboxes.push(labelText);
+                }
+            });
+            
+            if (!allChecked) {
+                alert('Prosím, označte všetky povinné políčka:\n\n' + missingCheckboxes.join('\n\n'));
+                return false;
+            }
+            
+            // Check required form fields
+            const requiredFields = orderForm.querySelectorAll('input[required], select[required]');
+            let allFieldsFilled = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    allFieldsFilled = false;
+                    field.style.borderColor = '#dc3545';
+                } else {
+                    field.style.borderColor = '#ddd';
+                }
+            });
+            
+            if (!allFieldsFilled) {
+                alert('Prosím, vyplňte všetky povinné polia (označené hviezdičkou).');
+                return false;
+            }
+            
+            // If all validations pass
+            alert('Objednávka bola úspešne odoslaná! Budeme Vás kontaktovať do 24 hodín s ďalšími informáciami o zálohové platbe.');
             hideDetailedOrderForm();
             // Here you would normally send the data to your server
         });
@@ -1214,6 +1549,56 @@ document.addEventListener('click', function(e) {
         hideDetailedOrderForm();
     }
 });
+
+// Price Calculator Functions
+function calculatePrice() {
+    let basePrice = 42000;
+    let foundationPrice = 0;
+    let exteriorPrice = 0;
+    let interiorPrice = 0;
+    
+    // Get all select elements with price categories
+    const selects = document.querySelectorAll('select[data-price-category]');
+    
+    selects.forEach(select => {
+        const selectedOption = select.options[select.selectedIndex];
+        if (selectedOption && selectedOption.dataset.price) {
+            const price = parseInt(selectedOption.dataset.price);
+            const category = select.dataset.priceCategory;
+            
+            switch(category) {
+                case 'foundation':
+                    foundationPrice += price;
+                    break;
+                case 'exterior':
+                    exteriorPrice += price;
+                    break;
+                case 'interior':
+                    interiorPrice += price;
+                    break;
+            }
+        }
+    });
+    
+    // Update price display
+    document.getElementById('base-price').textContent = formatPrice(basePrice);
+    document.getElementById('foundation-price').textContent = formatPrice(foundationPrice);
+    document.getElementById('exterior-price').textContent = formatPrice(exteriorPrice);
+    document.getElementById('interior-price').textContent = formatPrice(interiorPrice);
+    
+    // Calculate totals
+    const totalWithoutVAT = basePrice + foundationPrice + exteriorPrice + interiorPrice;
+    const totalWithVAT = Math.round(totalWithoutVAT * 1.20);
+    const advancePayment = Math.round(totalWithoutVAT * 0.5);
+    
+    document.getElementById('total-price').textContent = formatPrice(totalWithoutVAT);
+    document.getElementById('total-price-vat').textContent = formatPrice(totalWithVAT);
+    document.getElementById('advance-payment').textContent = formatPrice(advancePayment);
+}
+
+function formatPrice(price) {
+    return new Intl.NumberFormat('sk-SK').format(price) + ' €';
+}
 </script>
 
 </body>
