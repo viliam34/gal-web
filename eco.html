@@ -882,7 +882,7 @@
 <div id="detailed-order-form" class="detailed-form-container" style="display: none;">
     <div class="detailed-form-content">
         <div class="form-header">
-            <h2>Objednávka projektu na stavebné povolenie a realizáciu stavby</h2>
+            <h2>Objednávkový formulár</h2>
             <button class="close-form-btn" onclick="hideDetailedOrderForm()">×</button>
         </div>
         
@@ -981,16 +981,17 @@
 
             <!-- Pripravenosť podkladu -->
             <div class="form-section">
-                <h3>Pripravenosť podkladu a prípojky</h3>
+                <h3>Pripravenosť podkladu a sietí</h3>
                 <div class="form-row">
                     <div class="form-group">
-                        <label>Pripravenosť podkladu *</label>
-                        <select class="form-select" required onchange="calculatePrice()" data-price-category="foundation">
-                            <option value="" data-price="0">Vyberte typ podkladu</option>
-                            <option value="betonova_doska" data-price="0">Betónová doska</option>
-                            <option value="betonove_pasy" data-price="0">Betónové pásy</option>
-                            <option value="zemne_skrutky" data-price="0">Zemné skrutky</option>
+                        <label>Pripravenosť základov *</label>
+                        <select class="form-select" required onchange="calculatePrice(); toggleZakladyOptions()" data-price-category="foundation" id="zaklady-select">
+                            <option value="" data-price="0">Vyberte možnosť</option>
+                            <option value="mam_betonova_doska" data-price="0">Mám pripravené - betónová doska</option>
+                            <option value="mam_betonove_pasy" data-price="0">Mám pripravené - betónové pásy/pätky</option>
+                            <option value="mam_zemne_skrutky" data-price="0">Mám pripravené - zemné skrutky</option>
                             <option value="bez_podkladu" data-price="5000">Bez pripraveného podkladu - potrebujem realizáciu od vás (+5 000 €)</option>
+                            <option value="potrebujem_zaklady" data-price="8000">Nemám pripravené - potrebujem realizáciu základov od Vás (+8 000 €)</option>
                         </select>
                     </div>
                 </div>
@@ -1009,32 +1010,6 @@
                             <option value="">Vyberte možnosť</option>
                             <option value="mam">Mám k dispozícii</option>
                             <option value="potrebujem">Potrebujem realizáciu od vás</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Základy -->
-            <div class="form-section">
-                <h3>Základy (povinné)</h3>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Realizácia základov *</label>
-                        <select class="form-select" id="zaklady-select" required onchange="toggleZakladyOptions(); calculatePrice()" data-price-category="foundation">
-                            <option value="" data-price="0">Vyberte možnosť</option>
-                            <option value="mam" data-price="0">Mám pripravené/pripravím si ich sám</option>
-                            <option value="potrebujem" data-price="8000">Nemám - potrebujem realizáciu od Vás (+8 000 €)</option>
-                        </select>
-                    </div>
-                </div>
-                <div id="zaklady-typ" class="form-row" style="display: none;">
-                    <div class="form-group">
-                        <label>Typ základov</label>
-                        <select class="form-select">
-                            <option value="">Vyberte typ základov</option>
-                            <option value="betonova_doska">Betónová doska</option>
-                            <option value="betonove_pasy">Betónové pásy/pätky</option>
-                            <option value="zemne_skrutky">Zemné skrutky</option>
                         </select>
                     </div>
                 </div>
@@ -1108,6 +1083,17 @@
                     <div class="form-group">
                         <label>Farebný odtieň okien a dverí</label>
                         <input type="text" class="form-input" placeholder="Zadajte kód farby">
+                    </div>
+                </div>
+                
+                <h4>Fotovoltika</h4>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Solárne panely</label>
+                        <select class="form-select" onchange="calculatePrice()" data-price-category="exterior">
+                            <option value="" data-price="0">Bez solárnych panelov</option>
+                            <option value="ano" data-price="6500">Áno, chcem solárne panely (+6 500 €)</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -1224,6 +1210,38 @@
                         <select class="form-select" onchange="calculatePrice()" data-price-category="interior">
                             <option value="" data-price="0">Bez solárnych panelov</option>
                             <option value="ano" data-price="6500">Áno, chcem solárne panely (+6 500 €)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doplnkové služby -->
+            <div class="form-section">
+                <h3>Doplnkové služby (voliteľné)</h3>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Administratívna pomoc - pomoc s povoleniami a dokumentáciou</label>
+                        <div style="display: flex; gap: 20px; align-items: center; margin-top: 8px;">
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; margin-bottom: 0;">
+                                <input type="radio" name="admin-pomoc" value="ano">
+                                <span>Áno</span>
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; margin-bottom: 0;">
+                                <input type="radio" name="admin-pomoc" value="nie">
+                                <span>Nie</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Projektová dokumentácia</label>
+                        <select class="form-select">
+                            <option value="">Vyberte možnosť</option>
+                            <option value="zaujem">Mám záujem o projektovú dokumentáciu kvôli stavebnému povoleniu</option>
+                            <option value="nemam-zaujem">Nemám záujem</option>
                         </select>
                     </div>
                 </div>
