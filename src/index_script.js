@@ -56,10 +56,10 @@ function currentSlide(slideIndex) {
     changeBackgroundImg(slideIndex - 1);
 }
 
-// Auto-advance slideshow
-setInterval(() => {
-    changeBackgroundImg('right');
-}, 5000);
+// Auto-advance slideshow - DISABLED
+// setInterval(() => {
+//     changeBackgroundImg('right');
+// }, 5000);
 
 // Initialize
 document.addEventListener('DOMContentLoaded', function() {
