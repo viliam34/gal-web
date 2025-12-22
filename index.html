@@ -54,6 +54,7 @@
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Cal Sans', sans-serif !important;
       font-weight: 600 !important;
+      letter-spacing: 0.5px;
     }
 
     /* Slideshow Container */
@@ -128,11 +129,11 @@
     <!--<a href="#home" class="w3-bar-item w3-button w3-wide" style="font-size: 2vh;color: white;">MyCabinHouse</a> -->
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small" style="padding-top: 2.5vh;">
-      <a href="#home" class="w3-bar-item w3-button" style="font-size: 2vh;color: rgb(0, 0, 0);">DOMOV</a>
-      <a href="#team" class="w3-bar-item w3-button" style="font-size: 2vh;color: rgb(0, 0, 0);">MODULOVÉ DOMY</a>
-      <a href="javascript:void(0)" class="w3-bar-item w3-button" style="font-size: 2vh;color: rgb(0, 0, 0);" onclick="showPripravujeme()">WELLNESS MODULY</a>
-      <a href="#ako_to_funguje" class="w3-bar-item w3-button" style="font-size: 2vh;color: rgb(0, 0, 0);">AKO TO FUNGUJE</a>
-      <a href="#contact" class="w3-bar-item w3-button" style="font-size: 2vh;color: rgb(0, 0, 0);">KONTAKT</a>
+      <a href="#home" class="w3-bar-item w3-button" style="font-size: 2vh;color: rgb(0, 0, 0);">Domov</a>
+      <a href="#team" class="w3-bar-item w3-button" style="font-size: 2vh;color: rgb(0, 0, 0);">Modulové domy</a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button" style="font-size: 2vh;color: rgb(0, 0, 0);" onclick="showPripravujeme()">Wellness moduly</a>
+      <a href="#ako_to_funguje" class="w3-bar-item w3-button" style="font-size: 2vh;color: rgb(0, 0, 0);">Ako to funguje</a>
+      <a href="#contact" class="w3-bar-item w3-button" style="font-size: 2vh;color: rgb(0, 0, 0);">Kontakt</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -145,11 +146,11 @@
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Zavrieť ×</a>
-  <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">DOMOV</a>
-  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">MODULOVÉ DOMY</a>
-  <a href="javascript:void(0)" onclick="showPripravujeme(); w3_close()" class="w3-bar-item w3-button">WELLNESS MODULY</a>
-  <a href="#ako_to_funguje" onclick="w3_close()" class="w3-bar-item w3-button">AKO TO FUNGUJE</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">KONTAKT</a>
+  <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">Domov</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">Modulové domy</a>
+  <a href="javascript:void(0)" onclick="showPripravujeme(); w3_close()" class="w3-bar-item w3-button">Wellness moduly</a>
+  <a href="#ako_to_funguje" onclick="w3_close()" class="w3-bar-item w3-button">Ako to funguje</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">Kontakt</a>
 </nav>
 
 <!-- Pripravujeme notification -->
@@ -161,7 +162,7 @@
 <header class="slideshow-container" id="home" >
   <div class="carousel">
     <div class="slide">
-      <img src="src/image_main_1.jpg" alt="Slide 1">
+      <img src="src/main-banner.png" alt="Slide 1">
       <div class="slide-content">
         <h1 style="font-family: 'Cal Sans', sans-serif; font-weight: 600; font-size: 32px; margin-bottom: 16px; color: white;">Modulové bývanie pre moderný životný štýl.</h1>
         <p style="font-family: 'Montserrat', sans-serif; font-weight: 300; font-size: 15px; line-height: 1.6; color: white; max-width: 500px;">Jednoduché, dostupné a štýlové domy vytvorené pre ľudí, ktorí chcú žiť slobodne a komfortne.</p>
@@ -169,7 +170,7 @@
     </div>
     
     <div class="slide">
-      <img src="src/image_main_2.jpg" alt="Slide 2">
+      <img src="src/main-banner.png" alt="Slide 2">
       <div class="slide-content">
         <h1 style="font-family: 'Cal Sans', sans-serif; font-weight: 600; font-size: 32px; margin-bottom: 16px; color: white;">Praktické riešenia z prírodných materiálov.</h1>
         <p style="font-family: 'Montserrat', sans-serif; font-weight: 300; font-size: 15px; line-height: 1.6; color: white; max-width: 500px;">Spojenie funkčnosti, estetiky a udržateľnosti – bývanie, ktoré dýcha spolu s prírodou.</p>
@@ -177,7 +178,7 @@
     </div>
     
     <div class="slide">
-      <img src="src/image_main_3.jpg" alt="Slide 3">
+      <img src="src/main-banner.png" alt="Slide 3">
       <div class="slide-content">
         <h1 style="font-family: 'Cal Sans', sans-serif; font-weight: 600; font-size: 32px; margin-bottom: 16px; color: white;">Dom, ktorý sa prispôsobí vám – kdekoľvek a kedykoľvek.</h1>
         <p style="font-family: 'Montserrat', sans-serif; font-weight: 300; font-size: 15px; line-height: 1.6; color: white; max-width: 500px;">Mobilné moduly, ktoré rastú s vašimi plánmi – sloboda bývania bez hraníc.</p>
@@ -186,8 +187,8 @@
   </div>
   
   <!-- Static buttons outside carousel -->
-  <div id="btn-wrapper" style="position: absolute; bottom: 120px; left: 50%; transform: translateX(-50%); z-index: 100; display: flex; gap: 20px;">
-    <p><a href="#contact" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-hover-opacity-off" style="border-radius: 1vh;">Získať ponuku</a></p>
+  <div id="btn-wrapper" style="position: absolute; bottom: 120px; left: 15%; z-index: 100; display: flex; gap: 20px;">
+    <a href="#contact" style="background: #FFC107; color: #222; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 16px; padding: 16px 36px; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 15px rgba(255,193,7,0.4); transition: all 0.3s ease;" onmouseover="this.style.background='#ffca2c'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(255,193,7,0.5)';" onmouseout="this.style.background='#FFC107'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(255,193,7,0.4)';">Získať ponuku</a>
   </div>
  
   <!-- Slideshow controls - HIDDEN while slideshow is disabled -->
@@ -209,11 +210,48 @@
   
 </header>
 
+<!-- Benefits Section -->
+<div style="background: #fff; padding: 25px 20px; border-bottom: 1px solid #eee;">
+  <div style="max-width: 1000px; margin: 0 auto; display: flex; justify-content: center; gap: 50px; flex-wrap: wrap;">
+    
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <div style="width: 45px; height: 45px; background: #FFC107; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+        <i class="fa fa-euro" style="font-size: 18px; color: #fff;"></i>
+      </div>
+      <div>
+        <div style="font-family: 'Cal Sans', sans-serif; font-weight: 600; font-size: 15px; color: #222;">Férová cena</div>
+        <div style="font-family: 'Montserrat', sans-serif; font-size: 12px; color: #888;">Bez skrytých poplatkov</div>
+      </div>
+    </div>
+    
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <div style="width: 45px; height: 45px; background: #FFC107; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+        <i class="fa fa-sliders" style="font-size: 18px; color: #fff;"></i>
+      </div>
+      <div>
+        <div style="font-family: 'Cal Sans', sans-serif; font-weight: 600; font-size: 15px; color: #222;">Modul na mieru</div>
+        <div style="font-family: 'Montserrat', sans-serif; font-size: 12px; color: #888;">Osobité úpravy podľa vás</div>
+      </div>
+    </div>
+    
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <div style="width: 45px; height: 45px; background: #FFC107; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+        <i class="fa fa-rocket" style="font-size: 18px; color: #fff;"></i>
+      </div>
+      <div>
+        <div style="font-family: 'Cal Sans', sans-serif; font-weight: 600; font-size: 15px; color: #222;">Expresná výstavba</div>
+        <div style="font-family: 'Montserrat', sans-serif; font-size: 12px; color: #888;">Bývajte už do 2 mesiacov</div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
 <div class="w3-container" style="padding:128px 16px; border-bottom: 2px solid rgb(121, 121, 121);" id="about">
   
   <div class="w3-row-padding" style="margin-top: 64px;">
     <div class="w3-col m6">
-      <img class="w3-image w3-round-large" src="src/group-photo.jpg" alt="O nás" style="width: 100%; height: auto;">
+      <img class="w3-image w3-round-large" src="src/house-1.jpeg" alt="O nás" style="width: 100%; height: auto;">
     </div>
     <div class="w3-col m6" style="padding-left: 32px;">
       <h1 style="font-family: 'Cal Sans', sans-serif !important; font-weight: 600 !important; font-size: 48px; color: #333; margin-bottom: 32px;">Čo je MODULMAX?</h1>
@@ -279,24 +317,17 @@
 <!-- Portfolio Section - Ponuka modulových domov -->
 <div class="w3-container" style="padding:128px 16px" id="team">
   <h2 class="w3-center" style="font-family: 'Cal Sans', sans-serif; font-weight: 600;">Ponuka našich modulových domov</h2>
+  <p class="w3-center" style="font-family: 'Montserrat', sans-serif; font-size: 16px; color: #666; max-width: 700px; margin: 20px auto 0 auto;">Ponúkame tri veľkosti modulových drevodomov navrhnuté tak, aby pokryli rôzne potreby a rozpočty.</p>
 
   <div style="margin-top:64px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1200px; margin-left: auto; margin-right: auto; padding: 0 20px;">
     <div>
       <div class="w3-card" style="height: 100%; display: flex; flex-direction: column;">
         <img src="src/donovaly.jpeg" alt="John" style="width:100%; height: 200px; object-fit: cover;">
         <div class="w3-container" style="flex: 1; display: flex; flex-direction: column; padding: 16px;">
-          <h3 style="font-family: 'Cal Sans', sans-serif; font-weight: 600;">BASIC</h3>
-          <p>Úsporný, praktický a jednoduchý modulový dom pre jednotlivcov alebo páry.
-              Ideálny ako víkendové bývanie, hosťovský dom alebo štartovací domov.
-              Vyrobený z poctivých prírodných materiálov, dodaný za 4 týždne.
-          </p>
-          <ul style="flex: 1;">
-              <li>Ideálny pre jednotlivcov alebo páry</li>
-              <li>Možnosť rozšírenia o ďalší modul alebo terasu</li>
-              <li>Dodaný za 4 týždne</li>  
-              <li>Možnosť dodať v prémiovej výbave</li>  
-            </ul>
-          <p style="margin-top: auto;"><a href="eco.html"><button class="w3-button w3-light-grey w3-block"><i class="	fa fa-wrench"></i> Zobraziť viac</button></a></p>
+          <h3 style="font-family: 'Cal Sans', sans-serif; font-weight: 600; margin-bottom: 4px;">MODUL BASIC</h3>
+          <p style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #666; margin-bottom: 12px;">35 m²</p>
+          <p style="font-family: 'Montserrat', sans-serif; flex: 1;">Kompaktné a cenovo dostupné riešenie pre jednotlivcov alebo páry, ktoré ponúka všetko potrebné pre pohodlné bývanie.</p>
+          <p style="margin-top: auto;"><a href="eco.html"><button class="w3-button w3-light-grey w3-block">🔘 Zobraziť detail modulu</button></a></p>
         </div>
       </div>
     </div>
@@ -304,19 +335,10 @@
       <div class="w3-card" style="height: 100%; display: flex; flex-direction: column;">
         <img src="src/lomnica.jpg" alt="Jane" style="width:100%; height: 200px; object-fit: cover;">
         <div class="w3-container" style="flex: 1; display: flex; flex-direction: column; padding: 16px;">
-          <h3 style="font-family: 'Cal Sans', sans-serif; font-weight: 600;">COMPACT</h3>
-          <p>Kompaktný a funkčne navrhnutý modulový dom v tvare L, ktorý ponúka ideálny pomer
-          priestoru, ceny a komfortu.
-          Dostatočne priestranný pre menšiu rodinu, s možnosťou rozšírenia o terasu. Dodaný za 6-8
-          týždňov.
-          </p>
-          <ul style="flex: 1;">
-              <li>Ideálne pre 3-4 člennú rodinu</li>
-              <li>Možnosť pridať terasu, aj zastrešené parkovanie</li>
-              <li>Dodaný za 6-8 týždňov</li>  
-              <li>Možnosť dodať v prémiovej výbave</li>  
-            </ul>
-          <p style="margin-top: auto;"><button class="w3-button w3-light-grey w3-block"><i class="	fa fa-wrench"></i> Zobraziť viac</button></p>
+          <h3 style="font-family: 'Cal Sans', sans-serif; font-weight: 600; margin-bottom: 4px;">MODUL COMPACT</h3>
+          <p style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #666; margin-bottom: 12px;">70 m²</p>
+          <p style="font-family: 'Montserrat', sans-serif; flex: 1;">Plnohodnotné bývanie s dostatkom priestoru pre menšiu rodinu alebo dlhodobé bývanie.</p>
+          <p style="margin-top: auto;"><button class="w3-button w3-light-grey w3-block">🔘 Zobraziť detail modulu</button></p>
         </div>
       </div>
     </div>
@@ -324,21 +346,41 @@
       <div class="w3-card" style="height: 100%; display: flex; flex-direction: column;">
         <img src="src/chopok.jpeg" alt="Mike" style="width:100%; height: 200px; object-fit: cover;">
         <div class="w3-container" style="flex: 1; display: flex; flex-direction: column; padding: 16px;">
-          <h3 style="font-family: 'Cal Sans', sans-serif; font-weight: 600;">FAMILY</h3>
-          <p>Priestranný a atraktívny modulový dom určený pre celoročné bývanie.
-Obsahuje dve detské izby, spálňu, obývačku s kuchyňou a dostatok úložného priestoru.
-Vďaka prepojeniu dvoch modulov ponúka variabilné riešenie s možnosťou rozšírenia o
-terasy alebo prestrešené parkovanie.
-Ideálny pre rodiny, ktoré hľadajú pohodlie, kvalitu a udržateľnosť v jednom. Dodaný za 6-8
-týždňov.</p>
-            <ul style="flex: 1;">
-              <li>Ideálne pre 3-4 člennú rodinu</li>
-              <li>Možnosť pridať terasu, aj zastrešené parkovanie</li>
-              <li>Dodaný za 6-8 týždňov</li>  
-              <li>Možnosť dodať v prémiovej výbave</li>  
-            </ul>
-          <p style="margin-top: auto;"><button class="w3-button w3-light-grey w3-block"><i class="	fa fa-wrench"></i> Zobraziť viac</button></p>
+          <h3 style="font-family: 'Cal Sans', sans-serif; font-weight: 600; margin-bottom: 4px;">MODUL FAMILY</h3>
+          <p style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #666; margin-bottom: 12px;">85 m²</p>
+          <p style="font-family: 'Montserrat', sans-serif; flex: 1;">Komfortný modul pre tých, ktorí chcú viac priestoru a vyšší štandard bývania.</p>
+          <p style="margin-top: auto;"><button class="w3-button w3-light-grey w3-block">🔘 Zobraziť detail modulu</button></p>
         </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Additional info text -->
+  <p style="font-family: 'Montserrat', sans-serif; font-size: 16px; color: #555; text-align: center; max-width: 900px; margin: 50px auto 0 auto; line-height: 1.7;">
+    Každý model ja navrhnutý ako modul, ktorý je možné kedykoľvek prispôsobiť, rozšíriť alebo kombinovať s ďalšími modulmi.
+  </p>
+  
+  <!-- Doplnkové služby -->
+  <div style="max-width: 1200px; margin: 50px auto 0 auto; padding: 0 20px;">
+    <h4 style="font-family: 'Cal Sans', sans-serif; font-weight: 600; font-size: 20px; text-align: center; margin-bottom: 30px; color: #222;">Doplnkové služby</h4>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+      <div style="background: #fff; border-radius: 12px; padding: 24px 28px; display: flex; align-items: center; gap: 18px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border: 1px solid #e0e0e0; border-left: 4px solid #FFC107;">
+        <div style="width: 54px; height: 54px; background: #FFC107; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          <i class="fa fa-wrench" style="font-size: 24px; color: #fff;"></i>
+        </div>
+        <span style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #444;">Realizácia základov pre modulový dom</span>
+      </div>
+      <div style="background: #fff; border-radius: 12px; padding: 24px 28px; display: flex; align-items: center; gap: 18px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border: 1px solid #e0e0e0; border-left: 4px solid #FFC107;">
+        <div style="width: 54px; height: 54px; background: #FFC107; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          <i class="fa fa-file-text-o" style="font-size: 24px; color: #fff;"></i>
+        </div>
+        <span style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #444;">Administratívna pomoc s povoleniami a dokumentáciou</span>
+      </div>
+      <div style="background: #fff; border-radius: 12px; padding: 24px 28px; display: flex; align-items: center; gap: 18px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border: 1px solid #e0e0e0; border-left: 4px solid #FFC107;">
+        <div style="width: 54px; height: 54px; background: #FFC107; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          <i class="fa fa-paint-brush" style="font-size: 24px; color: #fff;"></i>
+        </div>
+        <span style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #444;">Návrh interiéru a interiérový dizajn</span>
       </div>
     </div>
   </div>
@@ -547,19 +589,223 @@ týždňov.</p>
 </div>
 
 <!-- Promo Section - Flexibilita a mobilita -->
-<div class="full-width w3-light-grey" style="width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; padding: 128px 0; box-sizing: border-box;">
-  <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-    <div class="w3-row-padding">
-    <div class="w3-col m6">
-      <h3 style="font-family: 'Cal Sans', sans-serif; font-weight: 600;">Flexibilita ako životný prístup</h3>
-      <p>Život sa vyvíja a spolu s ním aj naše potreby. MODULMAX domy sú navrhnuté tak, aby na tieto zmeny dokázali prirodzene reagovať. Vďaka modulárnemu systému je možné dom postupne rozširovať o ďalšie moduly, čím sa obytný priestor prispôsobuje aktuálnej životnej situácii – či už ide o rast rodiny, zmenu spôsobu bývania, podnikateľský zámer alebo investičné využitie.</p>
-      <p>To, čo dnes začína ako kompaktný dom, sa môže časom rozrásť na plnohodnotné bývanie, víkendový objekt alebo kombináciu bývania a práce. MODULMAX tak ponúka slobodu plánovať v etapách – bez nutnosti kompromisov alebo nevratných rozhodnutí.</p>
-      <p>Možnosť presunu domu na iný pozemok zostáva súčasťou jeho konceptu, no hlavnou hodnotou je schopnosť rásť, meniť sa a prispôsobovať sa spolu s vami. MODULMAX predstavuje moderný prístup k bývaniu, kde dom nie je limitom, ale otvoreným systémom.</p>
+<div class="full-width" style="width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; padding: 50px 0 40px; box-sizing: border-box; background: #fff;">
+  <div style="max-width: 800px; margin: 0 auto; padding: 0 30px;">
+    
+    <!-- Title -->
+    <h2 style="font-family: 'Cal Sans', sans-serif; font-weight: 600; font-size: 28px; margin-bottom: 20px; color: #333;">Flexibilita ako životný prístup</h2>
+    
+    <!-- First paragraph -->
+    <p style="font-family: 'Montserrat', sans-serif; font-size: 14px; line-height: 1.8; color: #444; margin-bottom: 20px;">
+      Život sa vyvíja a spolu s ním aj naše potreby. MODULMAX domy sú navrhnuté tak, aby na <strong>tieto zmeny dokázali prirodzene reagovať</strong>. Vďaka modulárnemu <em>systému</em> je možné <strong>dom postupne rozširovať o ďalšie moduly</strong>, čím sa obytný priestor prispôsobuje aktuálnej životnej situácii – či už ide o rast rodiny, zmenu spôsobu bývania, podnikateľský zámer alebo investičné využitie.
+    </p>
+    
+    <!-- Second paragraph italic -->
+    <p style="font-family: 'Montserrat', sans-serif; font-size: 14px; line-height: 1.8; color: #444; margin-bottom: 25px; font-style: italic;">
+      To, čo dnes začína ako kompaktný dom, sa môže časom <strong style="font-style: normal;">rozrásť</strong> na <strong style="font-style: normal;">plnohodnotné bývanie</strong>, víkendový objekt alebo kombináciu <strong style="font-style: normal;">bývania a práce</strong>. MODULMAX tak ponúka slobodu plánovať v etapách – bez nutnosti kompromisov alebo <strong style="font-style: normal;">nevratných rozhodnutí</strong>.
+    </p>
+    
+    <!-- Image with numbered markers -->
+    <div style="position: relative; margin-bottom: 10px;">
+      <img src="src/house-different-sizes.png" alt="Modulárne domy MODULMAX" style="width: 100%;">
+      <!-- Numbers in a row with dots between them -->
+      <div style="position: absolute; top: 18%; left: 30%; right: 15%; display: flex; align-items: center;">
+        <div style="width: 28px; height: 28px; background: #c4a35a; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Cal Sans', sans-serif; font-weight: 600; font-size: 15px; border: 2px solid #fff; flex-shrink: 0;">1</div>
+        <span style="flex: 1; border-bottom: 2px dotted #c4a35a; margin: 0 8px;"></span>
+        <div style="width: 28px; height: 28px; background: #c4a35a; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Cal Sans', sans-serif; font-weight: 600; font-size: 15px; border: 2px solid #fff; flex-shrink: 0;">2</div>
+        <span style="flex: 1; border-bottom: 2px dotted #c4a35a; margin: 0 8px;"></span>
+        <div style="width: 28px; height: 28px; background: #c4a35a; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Cal Sans', sans-serif; font-weight: 600; font-size: 15px; border: 2px solid #fff; flex-shrink: 0;">3</div>
+      </div>
+    </div>
+    
+    <!-- Timeline row -->
+    <div style="display: flex; align-items: center; margin-bottom: 5px; padding: 0 5px;">
+      <span style="color: #c4a35a; font-family: 'Cal Sans', sans-serif; font-weight: 600; font-size: 16px;">1</span>
+      <span style="flex: 1; border-bottom: 1px dotted #c4a35a; margin: 0 8px;"></span>
+      <span style="color: #c4a35a; font-family: 'Cal Sans', sans-serif; font-weight: 600; font-size: 16px;">2</span>
+      <span style="flex: 1; border-bottom: 1px dotted #c4a35a; margin: 0 8px;"></span>
+      <span style="color: #c4a35a; font-family: 'Cal Sans', sans-serif; font-weight: 600; font-size: 16px;">3</span>
+      <span style="flex: 0.5; border-bottom: 1px dotted #c4a35a; margin: 0 8px;"></span>
+      <span style="color: #c4a35a;">→</span>
+    </div>
+    
+    <!-- Labels row -->
+    <div style="display: flex; justify-content: space-between; margin-bottom: 30px; padding: 0 5px;">
+      <div style="display: flex; align-items: center; gap: 4px;">
+        <span style="color: #6b8e5e; font-size: 12px;">✓</span>
+        <span style="font-family: 'Montserrat', sans-serif; font-size: 12px; color: #333;">Kompaktný dom</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 4px;">
+        <span style="color: #6b8e5e; font-size: 12px;">✓</span>
+        <span style="font-family: 'Montserrat', sans-serif; font-size: 12px; color: #333;">Plnohodnotné bývanie</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 4px;">
+        <span style="color: #6b8e5e; font-size: 12px;">✓</span>
+        <span style="font-family: 'Montserrat', sans-serif; font-size: 12px; color: #333;">Kombinácia bývania a práce</span>
+      </div>
+    </div>
+    
+    <!-- Two info boxes -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+      <div style="background: #f8f8f8; border-radius: 8px; padding: 18px 20px;">
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px;">
+          <div style="width: 24px; height: 24px; background: #6b8e5e; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <span style="color: #fff; font-size: 12px;">✓</span>
+          </div>
+          <span style="font-family: 'Cal Sans', sans-serif; font-weight: 600; font-size: 14px; color: #333; line-height: 1.5;">Bez nutnosti kompromisov alebo nevratných rozhodnutí.</span>
+        </div>
+        <p style="font-family: 'Montserrat', sans-serif; font-size: 12px; line-height: 1.6; color: #666; margin: 0 0 0 34px;">
+          <span style="color: #6b8e5e; margin-right: 4px;">✓</span> MODULMAX predstavuje moderný prístup k bývaniu, kde dom nie je limitom, ale otvoreným systémom.
+        </p>
+      </div>
+      
+      <div style="background: #f8f8f8; border-radius: 8px; padding: 18px 20px;">
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px;">
+          <div style="width: 24px; height: 24px; background: #6b8e5e; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <span style="color: #fff; font-size: 12px;">✓</span>
+          </div>
+          <span style="font-family: 'Cal Sans', sans-serif; font-weight: 600; font-size: 14px; color: #333; line-height: 1.5;">Možnosť presunu domu na iný pozemok no hlavnou hodnotou je schopnosť rásť.</span>
+        </div>
+        <p style="font-family: 'Montserrat', sans-serif; font-size: 12px; line-height: 1.6; color: #666; margin: 0 0 0 34px;">
+          <span style="color: #6b8e5e; margin-right: 4px;">✓</span> MODULMAX predstavuje moderný prístup k bývaniu, kde dom nie je limitom, ale otvoreným systémom.
+        </p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Čo je v základnej cene Section -->
+<div class="full-width" style="width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; padding: 100px 0; box-sizing: border-box; background: linear-gradient(180deg, #f8f8f8 0%, #f0f0f0 100%);">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 30px;">
+    
+    <!-- Title -->
+    <div style="text-align: center; margin-bottom: 60px;">
+      <span style="font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600; color: #6b8e5e; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 12px;">Štandardné vyhotovenie</span>
+      <h2 style="font-family: 'Cal Sans', sans-serif; font-weight: 600; font-size: 38px; margin-bottom: 18px; color: #222;">Čo je v základnej cene?</h2>
+      <p style="font-family: 'Montserrat', sans-serif; font-size: 16px; line-height: 1.7; color: #666; max-width: 700px; margin: 0 auto 8px auto;">
+        Modulový dom MODULMAX dodávame v kompletnom štandardnom vyhotovení, pripravený na užívanie.
+      </p>
+      <p style="font-family: 'Montserrat', sans-serif; font-size: 14px; color: #888; margin: 0;">
+        Základná cena zahŕňa nasledovné položky:
+      </p>
+    </div>
+    
+    <!-- Konštrukcia a exteriér with image - MAIN CARD -->
+    <div style="background: #fff; border-radius: 20px; padding: 45px; margin-bottom: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); display: flex; gap: 50px; align-items: center; border: 1px solid #e8e8e8; position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 15px 50px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 40px rgba(0,0,0,0.08)';">
+      <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, #c4a35a 0%, #d4b86a 100%);"></div>
+      <div style="flex: 1;">
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 28px;">
+          <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #c4a35a 0%, #d4b86a 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(196,163,90,0.3);">
+            <i class="fa fa-home" style="font-size: 28px; color: #fff;"></i>
+          </div>
+          <h3 style="font-family: 'Cal Sans', sans-serif; font-weight: 600; font-size: 24px; color: #222; margin: 0;">Konštrukcia a exteriér</h3>
+        </div>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #444; margin-bottom: 14px; padding: 10px 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: flex-start; gap: 12px;">
+            <span style="width: 24px; height: 24px; background: #e8f5e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><i class="fa fa-check" style="color: #6b8e5e; font-size: 12px;"></i></span> nosná modulová konštrukcia z dreva (KVH)
+          </li>
+          <li style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #444; margin-bottom: 14px; padding: 10px 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: flex-start; gap: 12px;">
+            <span style="width: 24px; height: 24px; background: #e8f5e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><i class="fa fa-check" style="color: #6b8e5e; font-size: 12px;"></i></span> tepelná izolácia Climatizer Plus vhodná na celoročné bývanie
+          </li>
+          <li style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #444; margin-bottom: 14px; padding: 10px 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: flex-start; gap: 12px;">
+            <span style="width: 24px; height: 24px; background: #e8f5e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><i class="fa fa-check" style="color: #6b8e5e; font-size: 12px;"></i></span> strecha - PVC folia s okrajovým poplastovaním; odvodňovací systém
+          </li>
+          <li style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #444; margin-bottom: 14px; padding: 10px 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: flex-start; gap: 12px;">
+            <span style="width: 24px; height: 24px; background: #e8f5e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><i class="fa fa-check" style="color: #6b8e5e; font-size: 12px;"></i></span> fasáda - Silikónová omietka Baumit SilikonTop (hrúbka zrna 1,5 mm)
+          </li>
+          <li style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #444; padding: 10px 0; display: flex; align-items: flex-start; gap: 12px;">
+            <span style="width: 24px; height: 24px; background: #e8f5e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><i class="fa fa-check" style="color: #6b8e5e; font-size: 12px;"></i></span> plastové okná a vstupné dvere s izolačným trojsklom Aluplast INTERTEC 85
+          </li>
+        </ul>
+      </div>
+      <div style="flex-shrink: 0;">
+        <img src="src/house-different-sizes.png" alt="Modulový dom" style="width: 360px; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,0.12);">
+      </div>
+    </div>
+    
+    <!-- Grid for other sections -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+      
+      <!-- Interiér -->
+      <div style="background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 8px 30px rgba(0,0,0,0.06); border: 1px solid #e8e8e8; position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 40px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 30px rgba(0,0,0,0.06)';">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, #6b8e5e 0%, #7da36f 100%);"></div>
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 24px;">
+          <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #6b8e5e 0%, #7da36f 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(107,142,94,0.3);">
+            <i class="fa fa-bed" style="font-size: 22px; color: #fff;"></i>
+          </div>
+          <h3 style="font-family: 'Cal Sans', sans-serif; font-weight: 600; font-size: 20px; color: #222; margin: 0;">Interiér</h3>
+        </div>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li style="font-family: 'Montserrat', sans-serif; font-size: 14px; color: #555; margin-bottom: 12px; padding: 8px 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: flex-start; gap: 10px;">
+            <span style="width: 22px; height: 22px; background: #e8f5e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><i class="fa fa-check" style="color: #6b8e5e; font-size: 10px;"></i></span> laminátové podlahy Egger
+          </li>
+          <li style="font-family: 'Montserrat', sans-serif; font-size: 14px; color: #555; margin-bottom: 12px; padding: 8px 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: flex-start; gap: 10px;">
+            <span style="width: 22px; height: 22px; background: #e8f5e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><i class="fa fa-check" style="color: #6b8e5e; font-size: 10px;"></i></span> interiérové dvere so zárubňami
+          </li>
+          <li style="font-family: 'Montserrat', sans-serif; font-size: 14px; color: #555; padding: 8px 0; display: flex; align-items: flex-start; gap: 10px;">
+            <span style="width: 22px; height: 22px; background: #e8f5e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><i class="fa fa-check" style="color: #6b8e5e; font-size: 10px;"></i></span> sadrokartónové steny a stropy
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Technické vybavenie -->
+      <div style="background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 8px 30px rgba(0,0,0,0.06); border: 1px solid #e8e8e8; position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 40px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 30px rgba(0,0,0,0.06)';">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, #c4a35a 0%, #d4b86a 100%);"></div>
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 24px;">
+          <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #c4a35a 0%, #d4b86a 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(196,163,90,0.3);">
+            <i class="fa fa-bolt" style="font-size: 22px; color: #fff;"></i>
+          </div>
+          <h3 style="font-family: 'Cal Sans', sans-serif; font-weight: 600; font-size: 20px; color: #222; margin: 0;">Technické vybavenie</h3>
+        </div>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li style="font-family: 'Montserrat', sans-serif; font-size: 14px; color: #555; margin-bottom: 12px; padding: 8px 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: flex-start; gap: 10px;">
+            <span style="width: 22px; height: 22px; background: #e8f5e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><i class="fa fa-check" style="color: #6b8e5e; font-size: 10px;"></i></span> kompletná elektroinštalácia (bez svietidiel)
+          </li>
+          <li style="font-family: 'Montserrat', sans-serif; font-size: 14px; color: #555; margin-bottom: 12px; padding: 8px 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: flex-start; gap: 10px;">
+            <span style="width: 22px; height: 22px; background: #e8f5e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><i class="fa fa-check" style="color: #6b8e5e; font-size: 10px;"></i></span> elektrický bojler na ohrev vody
+          </li>
+          <li style="font-family: 'Montserrat', sans-serif; font-size: 14px; color: #555; padding: 8px 0; display: flex; align-items: flex-start; gap: 10px;">
+            <span style="width: 22px; height: 22px; background: #e8f5e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><i class="fa fa-check" style="color: #6b8e5e; font-size: 10px;"></i></span> stropné vykurovanie pomocou infra fólií
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Kúpeľňa -->
+      <div style="background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 8px 30px rgba(0,0,0,0.06); border: 1px solid #e8e8e8; position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 40px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 30px rgba(0,0,0,0.06)';">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, #5a9fd4 0%, #6cb0e5 100%);"></div>
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 24px;">
+          <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #5a9fd4 0%, #6cb0e5 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(90,159,212,0.3);">
+            <i class="fa fa-tint" style="font-size: 22px; color: #fff;"></i>
+          </div>
+          <h3 style="font-family: 'Cal Sans', sans-serif; font-weight: 600; font-size: 20px; color: #222; margin: 0;">Kúpeľňa</h3>
+        </div>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li style="font-family: 'Montserrat', sans-serif; font-size: 14px; color: #555; margin-bottom: 12px; padding: 8px 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: flex-start; gap: 10px;">
+            <span style="width: 22px; height: 22px; background: #e8f5e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><i class="fa fa-check" style="color: #6b8e5e; font-size: 10px;"></i></span> hotová kúpeľňa so sanitou (sprchový kút, wc, umývadlo)
+          </li>
+          <li style="font-family: 'Montserrat', sans-serif; font-size: 13px; color: #888; padding: 8px 0; display: flex; align-items: flex-start; gap: 10px; font-style: italic;">
+            <span style="width: 22px; height: 22px; background: #f5f5f5; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><i class="fa fa-info" style="color: #999; font-size: 10px;"></i></span> kúpeľňu vieme dodať aj bez sanity alebo ju prispôsobiť individuálnym požiadavkám
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Doplňujúca informácia -->
+      <div style="background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 8px 30px rgba(0,0,0,0.06); border: 1px solid #e8e8e8; position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 40px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 30px rgba(0,0,0,0.06)';">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, #9b7bb8 0%, #ab8bc8 100%);"></div>
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 24px;">
+          <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #9b7bb8 0%, #ab8bc8 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(155,123,184,0.3);">
+            <i class="fa fa-info-circle" style="font-size: 22px; color: #fff;"></i>
+          </div>
+          <h3 style="font-family: 'Cal Sans', sans-serif; font-weight: 600; font-size: 20px; color: #222; margin: 0;">Doplňujúca informácia</h3>
+        </div>
+        <p style="font-family: 'Montserrat', sans-serif; font-size: 14px; color: #555; line-height: 1.8; margin: 0;">
+          Uvedená <span style="color: #c4a35a; font-weight: 600;">špecifikácia</span> predstavuje štandardné vyhotovenie modulového domu. Individuálne úpravy, výber iných materiálov alebo rozšírenie výbavy sú možné a budú posudzované a nacenené individuálne na základe konkrétnych požiadaviek zákazníka.
+        </p>
+      </div>
       
     </div>
-    <div class="w3-col m6">
-      <img class="w3-image w3-round-large" src="src/group-photo.jpg" alt="Buildings" width="700" height="394" style="padding-bottom: 2vh ;">
-    </div>
+    
   </div>
 </div>
 
@@ -576,14 +822,119 @@ Cieľom je, aby si každý mohol vytvoriť svoj unikátny modulový dom, podľa 
 </div> -->
 <!-- Services Section -->
 
+<!-- Skladba materiálov Section -->
+<div class="full-width" style="width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; padding: 100px 0; box-sizing: border-box; background: linear-gradient(180deg, #f8f8f8 0%, #f0f0f0 100%); border-top: 5px solid #FFC107; border-bottom: 5px solid #FFC107;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 30px;">
+    
+    <!-- Title -->
+    <div style="text-align: center; margin-bottom: 60px;">
+      <span style="font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600; color: #FFC107; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 12px;">Technické špecifikácie</span>
+      <h2 style="font-family: 'Cal Sans', sans-serif; font-weight: 600; font-size: 38px; margin-bottom: 18px; color: #222;">Skladba materiálov</h2>
+      <p style="font-family: 'Montserrat', sans-serif; font-size: 16px; color: #666; max-width: 600px; margin: 0 auto;">Detailný prehľad skladby jednotlivých konštrukčných prvkov</p>
+    </div>
+    
+    <!-- Grid for 4 sections -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px;">
+      
+      <!-- Obvodové steny -->
+      <div style="background: #fff; border-radius: 16px; padding: 36px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); border: 1px solid #e8e8e8; position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 40px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 30px rgba(0,0,0,0.08)';">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, #c4a35a 0%, #d4b86a 100%);"></div>
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #c4a35a 0%, #d4b86a 100%); border-radius: 14px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(196,163,90,0.3);">
+            <i class="fa fa-building" style="font-size: 24px; color: #fff;"></i>
+          </div>
+          <div>
+            <h3 style="font-family: 'Cal Sans', sans-serif; font-weight: 600; font-size: 22px; color: #222; margin: 0;">Obvodové steny</h3>
+            <span style="font-family: 'Montserrat', sans-serif; font-size: 12px; color: #999;">(smerom z interiéru)</span>
+          </div>
+        </div>
+        <ol style="font-family: 'Montserrat', sans-serif; font-size: 14px; color: #555; line-height: 2.2; padding-left: 22px; margin: 0;">
+          <li style="padding: 4px 0; border-bottom: 1px solid #f0f0f0;">Sadrokartón 12,5 mm <span style="color: #999; font-size: 11px;">(Alt.: sadrovláknité dosky Fermacell)</span></li>
+          <li style="padding: 4px 0; border-bottom: 1px solid #f0f0f0;">Inštalačná dutina zo zvislého latovania, laty 60/40, vyplnená izoláciou Climatizer Plus</li>
+          <li style="padding: 4px 0; border-bottom: 1px solid #f0f0f0;">Inteligentná parobrzdná membrána</li>
+          <li style="padding: 4px 0; border-bottom: 1px solid #f0f0f0;">OSB doska 15 mm</li>
+          <li style="padding: 4px 0; border-bottom: 1px solid #f0f0f0;">Nosný skelet – KVH 60/120 vyplnený izoláciou Climatizer Plus</li>
+          <li style="padding: 4px 0; border-bottom: 1px solid #f0f0f0;">OSB doska 12mm + fasádny EPS 60 mm <span style="color: #999; font-size: 11px;">(Alt.: kamenná vlna, konopné dosky)</span></li>
+          <li style="padding: 4px 0;">Výstužná vrstva a tenkovrstvá omietka, zrno 1,5 mm <span style="color: #999; font-size: 11px;">(Alt.: odvetraná fasáda)</span></li>
+        </ol>
+      </div>
+      
+      <!-- Priečky -->
+      <div style="background: #fff; border-radius: 16px; padding: 36px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); border: 1px solid #e8e8e8; position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 40px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 30px rgba(0,0,0,0.08)';">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, #6b8e5e 0%, #7da36f 100%);"></div>
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #6b8e5e 0%, #7da36f 100%); border-radius: 14px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(107,142,94,0.3);">
+            <i class="fa fa-columns" style="font-size: 24px; color: #fff;"></i>
+          </div>
+          <h3 style="font-family: 'Cal Sans', sans-serif; font-weight: 600; font-size: 22px; color: #222; margin: 0;">Priečky</h3>
+        </div>
+        <ol style="font-family: 'Montserrat', sans-serif; font-size: 14px; color: #555; line-height: 2.2; padding-left: 22px; margin: 0;">
+          <li style="padding: 4px 0; border-bottom: 1px solid #f0f0f0;">Sadrokartón 12,5 mm <span style="color: #999; font-size: 11px;">(alt. Fermacell)</span></li>
+          <li style="padding: 4px 0; border-bottom: 1px solid #f0f0f0;">OSB doska 12 mm P+D</li>
+          <li style="padding: 4px 0; border-bottom: 1px solid #f0f0f0;">Nosný rám C24 45/95 vyplnený akustickou izoláciou, v dutine vedené inštalácie</li>
+          <li style="padding: 4px 0; border-bottom: 1px solid #f0f0f0;">OSB doska 12 mm P+D</li>
+          <li style="padding: 4px 0;">Sadrokartón 12,5 mm</li>
+        </ol>
+      </div>
+      
+      <!-- Podlahy -->
+      <div style="background: #fff; border-radius: 16px; padding: 36px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); border: 1px solid #e8e8e8; position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 40px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 30px rgba(0,0,0,0.08)';">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, #5a9fd4 0%, #6cb0e5 100%);"></div>
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #5a9fd4 0%, #6cb0e5 100%); border-radius: 14px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(90,159,212,0.3);">
+            <i class="fa fa-th-large" style="font-size: 24px; color: #fff;"></i>
+          </div>
+          <h3 style="font-family: 'Cal Sans', sans-serif; font-weight: 600; font-size: 22px; color: #222; margin: 0;">Podlahy</h3>
+        </div>
+        <ol style="font-family: 'Montserrat', sans-serif; font-size: 14px; color: #555; line-height: 2.2; padding-left: 22px; margin: 0;">
+          <li style="padding: 4px 0; border-bottom: 1px solid #f0f0f0;">Podlahovina (laminátová podlaha)</li>
+          <li style="padding: 4px 0; border-bottom: 1px solid #f0f0f0;">Parozábrana – fólia alebo náterová hmota</li>
+          <li style="padding: 4px 0; border-bottom: 1px solid #f0f0f0;">OSB doska 22 mm</li>
+          <li style="padding: 4px 0; border-bottom: 1px solid #f0f0f0;">Nosný rám KVH 60/200 vyplnený izoláciou Climatizer Plus, v dutine kanalizačné rozvody</li>
+          <li style="padding: 4px 0; border-bottom: 1px solid #f0f0f0;">DHF difúzna doska Egger</li>
+          <li style="padding: 4px 0;">Roznášací drevený rošt, impregnovaný hranol 150/150</li>
+        </ol>
+      </div>
+      
+      <!-- Strop a strecha -->
+      <div style="background: #fff; border-radius: 16px; padding: 36px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); border: 1px solid #e8e8e8; position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 40px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 30px rgba(0,0,0,0.08)';">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, #9b7bb8 0%, #ab8bc8 100%);"></div>
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #9b7bb8 0%, #ab8bc8 100%); border-radius: 14px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(155,123,184,0.3);">
+            <i class="fa fa-home" style="font-size: 24px; color: #fff;"></i>
+          </div>
+          <div>
+            <h3 style="font-family: 'Cal Sans', sans-serif; font-weight: 600; font-size: 22px; color: #222; margin: 0;">Strop a strecha</h3>
+            <span style="font-family: 'Montserrat', sans-serif; font-size: 12px; color: #999;">(smerom z interiéru)</span>
+          </div>
+        </div>
+        <ol style="font-family: 'Montserrat', sans-serif; font-size: 14px; color: #555; line-height: 2; padding-left: 22px; margin: 0;">
+          <li style="padding: 3px 0; border-bottom: 1px solid #f0f0f0;">Sadrokartón 12,5 mm</li>
+          <li style="padding: 3px 0; border-bottom: 1px solid #f0f0f0;">PE fólia</li>
+          <li style="padding: 3px 0; border-bottom: 1px solid #f0f0f0;">Vykurovacia infračervená fólia</li>
+          <li style="padding: 3px 0; border-bottom: 1px solid #f0f0f0;">Zavesený oceľový rošt s izoláciou z mäkkej minerálnej vlny, inštalačné rozvody</li>
+          <li style="padding: 3px 0; border-bottom: 1px solid #f0f0f0;">Inteligentná parobrzdná membrána s latovaním – doska 25/110</li>
+          <li style="padding: 3px 0; border-bottom: 1px solid #f0f0f0;">Nosná konštrukcia KVH 80/200 vyplnená tepelnou izoláciou</li>
+          <li style="padding: 3px 0; border-bottom: 1px solid #f0f0f0;">DHF doska Egger</li>
+          <li style="padding: 3px 0; border-bottom: 1px solid #f0f0f0;">Dvojité spádové latovanie – spád + odvetrávacia dutina</li>
+          <li style="padding: 3px 0; border-bottom: 1px solid #f0f0f0;">OSB doska 18 mm P+D</li>
+          <li style="padding: 3px 0; border-bottom: 1px solid #f0f0f0;">Separačná textília 300g/m²</li>
+          <li style="padding: 3px 0;">Hydroizolačná PVC fólia 1,5 mm</li>
+        </ol>
+      </div>
+      
+    </div>
+    
+  </div>
+</div>
 
 <!-- Contact Section -->
 <!-- FAQ Section -->
-<div class="w3-container full-width" style="padding:128px 0; background-color: #fff;" id="faq">
+<div class="w3-container full-width" style="padding:100px 0; background-color: #e8e8e8;" id="faq">
   <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
     <h2 style="text-align: center; font-family: 'Cal Sans', sans-serif; font-weight: 600; margin-bottom: 64px;">FAQ – Často kladené otázky</h2>
     
-    <div style="max-width: 900px; margin: 0 auto;">
+    <div style="max-width: 900px; margin: 0 auto; background: #fff; border-radius: 16px; padding: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.06);">
       <!-- FAQ Item 1 -->
       <div class="faq-item" style="border-bottom: 1px solid #e0e0e0; padding: 24px 0;">
         <div class="faq-question" onclick="toggleFaq(1)" style="cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
