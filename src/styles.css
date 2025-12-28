@@ -30,26 +30,27 @@ p, h3, h1, h2, a ,html, body{
     font-size: 2.5vh;
     border: none;
     text-align: left;
-    background-color: #FFC107;
-    color: white;
+  background-color: #f5f5f5;
+  color: #222;
 }
 .send-inquiry{
-    width: 70%;
-    height:5vh;
-    background-color: #FFC107;
-    border-radius: 2vh;
-    border: none;
-    font-size: 2vh;
-    margin-left: 5vh;
+  width: 70%;
+  height:5vh;
+  background-color: #f5f5f5;
+  border-radius: 2vh;
+  border: none;
+  font-size: 2vh;
+  margin-left: 5vh;
+  color: #222;
 }
 .send-inquiry:hover{
-    width: 70%;
-    height:5vh;
-    background-color: #FFB300;
-    border-radius: 2vh;
-    border: none;
-    font-size: 2vh;
-    margin-left: 10%;
+  width: 70%;
+  height:5vh;
+  background-color: #e9e9e9;
+  border-radius: 2vh;
+  border: none;
+  font-size: 2vh;
+  margin-left: 10%;
 }
 .image-okno{
     background-image: url("standard_plocha_bezova_cervene.png");
@@ -90,8 +91,8 @@ p, h3, h1, h2, a ,html, body{
     max-width: 30%;
     text-align: center;
     font-weight: bold;
-    border: 2px solid #FFB300;
-    background-color: #FFC107;
+  border: 2px solid #ccc;
+  background-color: #f5f5f5;
     padding: 8px;
     margin: 5px;
 }
@@ -104,8 +105,8 @@ p, h3, h1, h2, a ,html, body{
     max-width: 30%;
     text-align: center;
     font-weight: bold;
-    border: 2px solid #FFB300;
-    background-color: #FFE082;
+  border: 2px solid #ccc;
+  background-color: #f5f5f5;
     margin: 5px;
 }
 .moznosti-doplnky{
@@ -151,7 +152,7 @@ p, h3, h1, h2, a ,html, body{
     width: 20%;
     text-align: center;
     font-weight: 400;
-    background-color: #FFE082;
+  background-color: #f5f5f5;
     margin-left: 2px;
     margin-right: 2px;
     margin-top: 2px;
@@ -160,14 +161,14 @@ p, h3, h1, h2, a ,html, body{
 .moznost-doplnok-clicked{
     font-family:sans-serif;
     border-radius: 1vh;
-    border: 3px solid #FFB300;
+  border: 3px solid #ccc;
     display: block;
     font-size: 1.5vh;
     width: 20%;
     text-align: center;
     font-weight: 400;
-    color: white;
-    background-color: #FFC107;
+  color: #222;
+  background-color: #f5f5f5;
     margin-left: 2px;
     margin-right: 2px;
     margin-top: 2px;
@@ -237,7 +238,7 @@ p, h3, h1, h2, a ,html, body{
     width: 45%;
     height: 20%;
     font-size: x-large;
-    background-color: #FFC107; 
+  background-color: #f5f5f5; 
     border: none;
     font-weight: 400;
     border-radius: 15px;
@@ -248,7 +249,7 @@ p, h3, h1, h2, a ,html, body{
     width: 45%;
     height: 20%;
     font-size: x-large;
-    background-color: #FFB300; 
+  background-color: #e9e9e9; 
     border: none;
     font-weight: 400;
     border-radius: 15px;
@@ -265,7 +266,7 @@ p, h3, h1, h2, a ,html, body{
   font-size: large;
   border-radius: 1vh;
   height: 4em;
-  background-color: #FFC107!important;
+  background-color: #f5f5f5!important;
 }
 .configurator-btn-large:hover{
   min-width: 40%;
@@ -274,7 +275,7 @@ p, h3, h1, h2, a ,html, body{
   border: 0px;
   font-size: large;
   border-radius: 1vh;
-  background-color: #FFB300!important;
+  background-color: #e9e9e9!important;
 }
 .input-text{
   width: 50% !important;
@@ -313,11 +314,11 @@ p, h3, h1, h2, a ,html, body{
 }
 
 .dot.active {
-  background-color: #FFC107;
+  background-color: #f5f5f5;
 }
 
 .dot:hover {
-  background-color: #FFE082;
+  background-color: #e9e9e9;
 }
 
 
@@ -498,14 +499,14 @@ tr:nth-child(even) {
 }
 
 .flip-card-back {
-  background-color: #FFC107!important;
-  color: white;
+  background-color: #f5f5f5!important;
+  color: #222;
   transform: rotateY(180deg);
   border-radius: 4vh;
 }
 .accordion{
-  background-color: #FFC107;
-  color: white;
+  background-color: #f5f5f5;
+  color: #222;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -519,7 +520,7 @@ tr:nth-child(even) {
 }
 .showMore{
   margin-top: 2vh;
-  background-color: #FFE082;
+  background-color: #f5f5f5;
   border: none;
   border-radius: 1vh;
   padding: 10px;
@@ -528,9 +529,9 @@ tr:nth-child(even) {
 }
 .showMore:hover{
   margin-top: 2vh;
-  background-color: #FF8F00;
+  background-color: #e9e9e9;
   border: none;
-  color: white;
+  color: #222;
   border-radius: 1vh;
   padding: 10px;
   margin-left: 46%;

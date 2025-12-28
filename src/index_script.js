@@ -64,4 +64,52 @@ function currentSlide(slideIndex) {
 // Initialize
 document.addEventListener('DOMContentLoaded', function() {
     updateDots();
+    // Scroll-to-top button behavior
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    function handleScrollBtn() {
+        const y = window.scrollY || document.documentElement.scrollTop;
+        if (!scrollBtn) return;
+        if (y > 200) {
+            scrollBtn.style.display = 'flex';
+        } else {
+            scrollBtn.style.display = 'none';
+        }
+        // Move down as you scroll
+        const base = 60; // px
+        const extra = Math.min(120, Math.round(y * 0.05));
+        scrollBtn.style.bottom = (base + extra) + 'px';
+    }
+    handleScrollBtn();
+    window.addEventListener('scroll', handleScrollBtn);
+
+    if (scrollBtn) {
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // Nav active indicator (scroll spy)
+    const navLinks = Array.from(document.querySelectorAll('.w3-bar .w3-bar-item[href^="#"]'));
+    const sections = ['home','team','ako_to_funguje','contact']
+        .map(id => ({ id, el: document.getElementById(id) }))
+        .filter(s => !!s.el);
+
+    function updateActiveNav() {
+        const y = window.scrollY || document.documentElement.scrollTop;
+        let currentId = sections[0]?.id;
+        const offset = 120; // threshold above section start
+        sections.forEach(s => {
+            const top = s.el.getBoundingClientRect().top + window.scrollY;
+            if (y >= top - offset) currentId = s.id;
+        });
+        navLinks.forEach(a => {
+            a.classList.remove('nav-active');
+            const href = a.getAttribute('href');
+            if (href === '#' + currentId) {
+                a.classList.add('nav-active');
+            }
+        });
+    }
+    updateActiveNav();
+    window.addEventListener('scroll', updateActiveNav);
 });
